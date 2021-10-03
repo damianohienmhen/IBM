@@ -2,12 +2,8 @@
 <html>
 <head><meta charset="utf-8" />
 
+
 <title>IBMHackathon</title>
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
-
-
 
 <style type="text/css">
     /*!
@@ -13038,20 +13034,17 @@ div#notebook {
   div.cell {
     display: block;
     page-break-inside: avoid;
-  } 
-  div.output_wrapper { 
-    display: block;
-    page-break-inside: avoid; 
   }
-  div.output { 
+  div.output_wrapper {
     display: block;
-    page-break-inside: avoid; 
+    page-break-inside: avoid;
+  }
+  div.output {
+    display: block;
+    page-break-inside: avoid;
   }
 }
 </style>
-
-<!-- Custom stylesheet, it must be in the same directory as the html file -->
-<link rel="stylesheet" href="custom.css">
 
 <!-- Loading mathjax macro -->
 <!-- Load mathjax -->
@@ -13074,14 +13067,63 @@ div#notebook {
         }
     });
     </script>
-    <!-- End of mathjax configuration --></head>
+    <!-- End of mathjax configuration -->
+
+<style>
+        .cell.nbinteract-left {
+            width: 50%;
+            float: left;
+        }
+
+        .cell.nbinteract-right {
+            width: 50%;
+            float: right;
+        }
+
+        .cell.nbinteract-hide_in > .input {
+            display: none;
+        }
+
+        .cell.nbinteract-hide_out > .output_wrapper {
+            display: none;
+        }
+
+        .cell:after {
+          content: "";
+          display: table;
+          clear: both;
+        }
+
+        div.output_subarea {
+            max-width: initial;
+        }
+
+        .jp-OutputPrompt {
+            display: none;
+        }
+    </style></head>
 <body>
   <div tabindex="-1" id="notebook" class="border-box-sizing">
-    <div class="container" id="notebook-container">
+    <div class="container">
+      
 
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[1]:</div>
+
+
+  <div class="cell text_cell">
+    <button class="js-nbinteract-widget">
+      Loading widgets...
+    </button>
+  </div>
+
+
+
+
+  
+
+  <div class="
+      cell border-box-sizing code_cell rendered">
+    <div class="input">
+
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span> <span class="c1"># library to handle data in a vectorized manner</span>
@@ -13125,8 +13167,7 @@ div#notebook {
 
 <div class="output_area">
 
-    <div class="prompt"></div>
-
+    
 
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>Collecting geojson
@@ -13302,10 +13343,14 @@ Successfully installed Jinja2-2.11.3 bqplot-0.11.0 docopt-0.6.2 nbconvert-5.6.1 
 </div>
 </div>
 
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[2]:</div>
+  </div>
+
+  
+
+  <div class="
+      cell border-box-sizing code_cell rendered">
+    <div class="input">
+
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">nbinteract</span> <span class="k">as</span> <span class="nn">nbi</span>
@@ -13315,10 +13360,14 @@ Successfully installed Jinja2-2.11.3 bqplot-0.11.0 docopt-0.6.2 nbconvert-5.6.1 
 </div>
 </div>
 
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[3]:</div>
+  </div>
+
+  
+
+  <div class="
+      cell border-box-sizing code_cell rendered">
+    <div class="input">
+
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Lets get the coordinate points for Atlanta</span>
@@ -13341,8 +13390,7 @@ Successfully installed Jinja2-2.11.3 bqplot-0.11.0 docopt-0.6.2 nbconvert-5.6.1 
 
 <div class="output_area">
 
-    <div class="prompt"></div>
-
+    
 
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>The geograpical coordinate of Florida are 27.7567667, -81.4639835.
@@ -13353,10 +13401,14 @@ Successfully installed Jinja2-2.11.3 bqplot-0.11.0 docopt-0.6.2 nbconvert-5.6.1 
 </div>
 </div>
 
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[4]:</div>
+  </div>
+
+  
+
+  <div class="
+      cell border-box-sizing code_cell rendered">
+    <div class="input">
+
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="o">!</span>pip install geopandas
@@ -13372,8 +13424,7 @@ Successfully installed Jinja2-2.11.3 bqplot-0.11.0 docopt-0.6.2 nbconvert-5.6.1 
 
 <div class="output_area">
 
-    <div class="prompt"></div>
-
+    
 
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>Collecting geopandas
@@ -13412,10 +13463,14 @@ Successfully installed click-plugins-1.1.1 cligj-0.7.2 fiona-1.8.20 geopandas-0.
 </div>
 </div>
 
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[5]:</div>
+  </div>
+
+  
+
+  <div class="
+      cell border-box-sizing code_cell rendered">
+    <div class="input">
+
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">geopandas</span>
@@ -13425,10 +13480,14 @@ Successfully installed click-plugins-1.1.1 cligj-0.7.2 fiona-1.8.20 geopandas-0.
 </div>
 </div>
 
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[6]:</div>
+  </div>
+
+  
+
+  <div class="
+      cell border-box-sizing code_cell rendered">
+    <div class="input">
+
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">url</span> <span class="o">=</span> <span class="s2">&quot;https://raw.githubusercontent.com/danielcs88/fl_geo_json/master/geojson-fl-counties-fips.json&quot;</span>
@@ -13439,10 +13498,14 @@ Successfully installed click-plugins-1.1.1 cligj-0.7.2 fiona-1.8.20 geopandas-0.
 </div>
 </div>
 
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[7]:</div>
+  </div>
+
+  
+
+  <div class="
+      cell border-box-sizing code_cell rendered">
+    <div class="input">
+
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span>
@@ -13458,8 +13521,7 @@ Successfully installed click-plugins-1.1.1 cligj-0.7.2 fiona-1.8.20 geopandas-0.
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[7]:</div>
-
+    
 
 
 <div class="output_html rendered_html output_subarea output_execute_result">
@@ -14239,10 +14301,14 @@ Successfully installed click-plugins-1.1.1 cligj-0.7.2 fiona-1.8.20 geopandas-0.
 </div>
 </div>
 
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[8]:</div>
+  </div>
+
+  
+
+  <div class="
+      cell border-box-sizing code_cell rendered">
+    <div class="input">
+
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">gdf</span> <span class="o">=</span> <span class="n">geopandas</span><span class="o">.</span><span class="n">GeoDataFrame</span><span class="p">(</span><span class="n">df</span><span class="p">,</span> <span class="n">crs</span><span class="o">=</span><span class="s2">&quot;EPSG:4326&quot;</span><span class="p">)</span>
@@ -14252,10 +14318,14 @@ Successfully installed click-plugins-1.1.1 cligj-0.7.2 fiona-1.8.20 geopandas-0.
 </div>
 </div>
 
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[9]:</div>
+  </div>
+
+  
+
+  <div class="
+      cell border-box-sizing code_cell rendered">
+    <div class="input">
+
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">newgdf</span> <span class="o">=</span> <span class="n">gdf</span><span class="o">.</span><span class="n">to_json</span><span class="p">()</span>
@@ -14265,10 +14335,14 @@ Successfully installed click-plugins-1.1.1 cligj-0.7.2 fiona-1.8.20 geopandas-0.
 </div>
 </div>
 
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[10]:</div>
+  </div>
+
+  
+
+  <div class="
+      cell border-box-sizing code_cell rendered">
+    <div class="input">
+
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">folium</span> <span class="c1"># map rendering library</span>
@@ -14278,10 +14352,14 @@ Successfully installed click-plugins-1.1.1 cligj-0.7.2 fiona-1.8.20 geopandas-0.
 </div>
 </div>
 
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[11]:</div>
+  </div>
+
+  
+
+  <div class="
+      cell border-box-sizing code_cell rendered">
+    <div class="input">
+
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">florida_geo</span> <span class="o">=</span> <span class="sa">r</span><span class="s1">&#39;fl-state.json&#39;</span> <span class="c1"># geojson file</span>
@@ -14294,18 +14372,21 @@ Successfully installed click-plugins-1.1.1 cligj-0.7.2 fiona-1.8.20 geopandas-0.
 </div>
 </div>
 
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
+  </div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>Let's attempt to generate cholopleth map of Florida showing the boundaries between each of the major cities.</p>
 
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[43]:</div>
+
+  
+
+  <div class="
+      cell border-box-sizing code_cell rendered">
+    <div class="input">
+
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># generate choropleth map using florida GeoJson Data</span>
@@ -14332,8 +14413,7 @@ Successfully installed click-plugins-1.1.1 cligj-0.7.2 fiona-1.8.20 geopandas-0.
 
 <div class="output_area">
 
-    <div class="prompt"></div>
-
+    
 
 <div class="output_subarea output_stream output_stderr output_text">
 <pre>/opt/conda/envs/Python-3.8-main/lib/python3.8/site-packages/folium/folium.py:409: FutureWarning: The choropleth  method has been deprecated. Instead use the new Choropleth class, which has the same arguments. See the example notebook &#39;GeoJSON_and_choropleth&#39; for how to do this.
@@ -14344,8 +14424,7 @@ Successfully installed click-plugins-1.1.1 cligj-0.7.2 fiona-1.8.20 geopandas-0.
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[43]:</div>
-
+    
 
 
 <div class="output_html rendered_html output_subarea output_execute_result">
@@ -14357,10 +14436,14 @@ Successfully installed click-plugins-1.1.1 cligj-0.7.2 fiona-1.8.20 geopandas-0.
 </div>
 </div>
 
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[44]:</div>
+  </div>
+
+  
+
+  <div class="
+      cell border-box-sizing code_cell rendered">
+    <div class="input">
+
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">xgdf</span> <span class="o">=</span> <span class="n">geopandas</span><span class="o">.</span><span class="n">GeoDataFrame</span><span class="p">(</span><span class="n">df</span><span class="p">,</span> <span class="n">geometry</span><span class="o">=</span><span class="n">geopandas</span><span class="o">.</span><span class="n">points_from_xy</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
@@ -14371,10 +14454,14 @@ Successfully installed click-plugins-1.1.1 cligj-0.7.2 fiona-1.8.20 geopandas-0.
 </div>
 </div>
 
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[45]:</div>
+  </div>
+
+  
+
+  <div class="
+      cell border-box-sizing code_cell rendered">
+    <div class="input">
+
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">county</span> <span class="o">=</span> <span class="n">xgdf</span><span class="p">[</span><span class="s2">&quot;NAME&quot;</span><span class="p">]</span>
@@ -14391,8 +14478,7 @@ Successfully installed click-plugins-1.1.1 cligj-0.7.2 fiona-1.8.20 geopandas-0.
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[45]:</div>
-
+    
 
 
 
@@ -14472,10 +14558,14 @@ Name: NAME, dtype: object</pre>
 </div>
 </div>
 
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[46]:</div>
+  </div>
+
+  
+
+  <div class="
+      cell border-box-sizing code_cell rendered">
+    <div class="input">
+
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">lat_list</span> <span class="o">=</span> <span class="p">[]</span>
@@ -14497,10 +14587,14 @@ Name: NAME, dtype: object</pre>
 </div>
 </div>
 
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[47]:</div>
+  </div>
+
+  
+
+  <div class="
+      cell border-box-sizing code_cell rendered">
+    <div class="input">
+
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">state</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">state_list</span><span class="p">)</span>
@@ -14523,8 +14617,7 @@ Name: NAME, dtype: object</pre>
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[47]:</div>
-
+    
 
 
 <div class="output_html rendered_html output_subarea output_execute_result">
@@ -15032,18 +15125,21 @@ Name: NAME, dtype: object</pre>
 </div>
 </div>
 
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
+  </div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>We will now use API calls from NSRDB (National Solar Radiation Database ) to obtain data for our Machine Learning Model <a href="https://nsrdb.nrel.gov/data-sets/api-instructions.html">https://nsrdb.nrel.gov/data-sets/api-instructions.html</a></p>
 
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[48]:</div>
+
+  
+
+  <div class="
+      cell border-box-sizing code_cell rendered">
+    <div class="input">
+
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">sys</span><span class="o">,</span> <span class="nn">os</span>
@@ -15054,10 +15150,14 @@ Name: NAME, dtype: object</pre>
 </div>
 </div>
 
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[49]:</div>
+  </div>
+
+  
+
+  <div class="
+      cell border-box-sizing code_cell rendered">
+    <div class="input">
+
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">url</span> <span class="o">=</span> <span class="s2">&quot;https://developer.nrel.gov/api/solar/nsrdb_psm3_download.csv?wkt=POINT(</span><span class="si">{lon}</span><span class="s2">%20</span><span class="si">{lat}</span><span class="s2">)&amp;names=</span><span class="si">{year}</span><span class="s2">&amp;leap_day=</span><span class="si">{leap}</span><span class="s2">&amp;interval=</span><span class="si">{interval}</span><span class="s2">&amp;utc=</span><span class="si">{utc}</span><span class="s2">&amp;full_name=</span><span class="si">{name}</span><span class="s2">&amp;email=</span><span class="si">{email}</span><span class="s2">&amp;affiliation=</span><span class="si">{affiliation}</span><span class="s2">&amp;mailing_list=</span><span class="si">{mailing_list}</span><span class="s2">&amp;reason=</span><span class="si">{reason}</span><span class="s2">&amp;api_key=</span><span class="si">{api}</span><span class="s2">&amp;attributes=</span><span class="si">{attr}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">year</span><span class="o">=</span><span class="mi">2019</span><span class="p">,</span> <span class="n">lat</span><span class="o">=</span><span class="mf">25.040513</span><span class="p">,</span> <span class="n">lon</span><span class="o">=-</span><span class="mf">80.833716</span><span class="p">,</span> <span class="n">leap</span><span class="o">=</span><span class="s1">&#39;false&#39;</span><span class="p">,</span> <span class="n">interval</span><span class="o">=</span><span class="mi">60</span><span class="p">,</span> <span class="n">utc</span><span class="o">=</span><span class="s1">&#39;true&#39;</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s1">&#39;DamianOhienmhen&#39;</span><span class="p">,</span> <span class="n">email</span><span class="o">=</span><span class="s1">&#39;dohmhen@gmail.com&#39;</span><span class="p">,</span> <span class="n">mailing_list</span><span class="o">=</span><span class="s1">&#39;false&#39;</span><span class="p">,</span> <span class="n">affiliation</span><span class="o">=</span><span class="s1">&#39;Nugenesis&#39;</span><span class="p">,</span> <span class="n">reason</span><span class="o">=</span><span class="s1">&#39;hackathon&#39;</span><span class="p">,</span> <span class="n">api</span><span class="o">=</span><span class="s1">&#39;RXSAmh30ugEyJuJYJCaTGkOpiNCmfB0SGJmpEwMy&#39;</span><span class="p">,</span> <span class="n">attr</span><span class="o">=</span><span class="s1">&#39;ghi,dhi,dni,wind_speed,air_temperature,solar_zenith_angle&#39;</span> <span class="p">,</span> <span class="n">skiprows</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
@@ -15067,10 +15167,14 @@ Name: NAME, dtype: object</pre>
 </div>
 </div>
 
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[50]:</div>
+  </div>
+
+  
+
+  <div class="
+      cell border-box-sizing code_cell rendered">
+    <div class="input">
+
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#energy = pd.read_csv(url,nrows = 10)</span>
@@ -15081,10 +15185,14 @@ Name: NAME, dtype: object</pre>
 </div>
 </div>
 
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[51]:</div>
+  </div>
+
+  
+
+  <div class="
+      cell border-box-sizing code_cell rendered">
+    <div class="input">
+
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#energy = df.set_index(pd.date_range(&#39;1/1/{yr}&#39;.format(yr=2020), freq=&quot;interval+&#39;Min&#39;&quot;, periods=525600/int(7844)))</span>
@@ -15094,10 +15202,14 @@ Name: NAME, dtype: object</pre>
 </div>
 </div>
 
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[52]:</div>
+  </div>
+
+  
+
+  <div class="
+      cell border-box-sizing code_cell rendered">
+    <div class="input">
+
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">energy</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">100</span><span class="p">)</span>
@@ -15113,8 +15225,7 @@ Name: NAME, dtype: object</pre>
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[52]:</div>
-
+    
 
 
 <div class="output_html rendered_html output_subarea output_execute_result">
@@ -20095,10 +20206,14 @@ Name: NAME, dtype: object</pre>
 </div>
 </div>
 
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[53]:</div>
+  </div>
+
+  
+
+  <div class="
+      cell border-box-sizing code_cell rendered">
+    <div class="input">
+
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">energy</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="n">energy</span><span class="o">.</span><span class="n">index</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">2</span><span class="p">],</span> <span class="n">inplace</span> <span class="o">=</span> <span class="kc">True</span><span class="p">)</span>
@@ -20115,8 +20230,7 @@ Name: NAME, dtype: object</pre>
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[53]:</div>
-
+    
 
 
 <div class="output_html rendered_html output_subarea output_execute_result">
@@ -20442,10 +20556,14 @@ Name: NAME, dtype: object</pre>
 </div>
 </div>
 
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[54]:</div>
+  </div>
+
+  
+
+  <div class="
+      cell border-box-sizing code_cell rendered">
+    <div class="input">
+
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">energy</span><span class="o">.</span><span class="n">shape</span>
@@ -20461,8 +20579,7 @@ Name: NAME, dtype: object</pre>
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[54]:</div>
-
+    
 
 
 
@@ -20475,10 +20592,14 @@ Name: NAME, dtype: object</pre>
 </div>
 </div>
 
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[55]:</div>
+  </div>
+
+  
+
+  <div class="
+      cell border-box-sizing code_cell rendered">
+    <div class="input">
+
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">GHIdflat</span> <span class="o">=</span> <span class="n">energy</span><span class="p">[</span><span class="s1">&#39;Latitude&#39;</span><span class="p">]</span>
@@ -20489,10 +20610,14 @@ Name: NAME, dtype: object</pre>
 </div>
 </div>
 
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[56]:</div>
+  </div>
+
+  
+
+  <div class="
+      cell border-box-sizing code_cell rendered">
+    <div class="input">
+
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">GHIdflat</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
@@ -20508,8 +20633,7 @@ Name: NAME, dtype: object</pre>
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[56]:</div>
-
+    
 
 
 
@@ -20527,10 +20651,14 @@ Name: Latitude, dtype: object</pre>
 </div>
 </div>
 
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[57]:</div>
+  </div>
+
+  
+
+  <div class="
+      cell border-box-sizing code_cell rendered">
+    <div class="input">
+
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">GHIdflat</span> <span class="o">=</span> <span class="n">GHIdflat</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">pd</span><span class="o">.</span><span class="n">to_numeric</span><span class="p">)</span>
@@ -20540,10 +20668,14 @@ Name: Latitude, dtype: object</pre>
 </div>
 </div>
 
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[58]:</div>
+  </div>
+
+  
+
+  <div class="
+      cell border-box-sizing code_cell rendered">
+    <div class="input">
+
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">meanghi</span> <span class="o">=</span> <span class="n">GHIdflat</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
@@ -20553,10 +20685,14 @@ Name: Latitude, dtype: object</pre>
 </div>
 </div>
 
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[59]:</div>
+  </div>
+
+  
+
+  <div class="
+      cell border-box-sizing code_cell rendered">
+    <div class="input">
+
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">GHIdflong</span> <span class="o">=</span> <span class="n">GHIdflong</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">pd</span><span class="o">.</span><span class="n">to_numeric</span><span class="p">)</span>
@@ -20566,10 +20702,14 @@ Name: Latitude, dtype: object</pre>
 </div>
 </div>
 
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[60]:</div>
+  </div>
+
+  
+
+  <div class="
+      cell border-box-sizing code_cell rendered">
+    <div class="input">
+
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">meanws</span> <span class="o">=</span> <span class="n">GHIdflong</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
@@ -20579,10 +20719,14 @@ Name: Latitude, dtype: object</pre>
 </div>
 </div>
 
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[61]:</div>
+  </div>
+
+  
+
+  <div class="
+      cell border-box-sizing code_cell rendered">
+    <div class="input">
+
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">data</span> <span class="o">=</span> <span class="p">[[</span><span class="n">meanghi</span><span class="p">,</span> <span class="n">meanws</span><span class="p">]]</span>
@@ -20600,8 +20744,7 @@ Name: Latitude, dtype: object</pre>
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[61]:</div>
-
+    
 
 
 <div class="output_html rendered_html output_subarea output_execute_result">
@@ -20643,10 +20786,14 @@ Name: Latitude, dtype: object</pre>
 </div>
 </div>
 
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[62]:</div>
+  </div>
+
+  
+
+  <div class="
+      cell border-box-sizing code_cell rendered">
+    <div class="input">
+
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">energy</span><span class="o">.</span><span class="n">columns</span><span class="o">.</span><span class="n">values</span>
@@ -20662,8 +20809,7 @@ Name: Latitude, dtype: object</pre>
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[62]:</div>
-
+    
 
 
 
@@ -20688,10 +20834,14 @@ Name: Latitude, dtype: object</pre>
 </div>
 </div>
 
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[63]:</div>
+  </div>
+
+  
+
+  <div class="
+      cell border-box-sizing code_cell rendered">
+    <div class="input">
+
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">sampledf</span> <span class="o">=</span> <span class="n">energy</span><span class="p">[[</span><span class="s1">&#39;Source&#39;</span><span class="p">,</span> <span class="s1">&#39;Latitude&#39;</span><span class="p">,</span>
@@ -20702,10 +20852,14 @@ Name: Latitude, dtype: object</pre>
 </div>
 </div>
 
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[64]:</div>
+  </div>
+
+  
+
+  <div class="
+      cell border-box-sizing code_cell rendered">
+    <div class="input">
+
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">sampledf</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
@@ -20721,8 +20875,7 @@ Name: Latitude, dtype: object</pre>
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[64]:</div>
-
+    
 
 
 <div class="output_html rendered_html output_subarea output_execute_result">
@@ -20808,10 +20961,14 @@ Name: Latitude, dtype: object</pre>
 </div>
 </div>
 
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[65]:</div>
+  </div>
+
+  
+
+  <div class="
+      cell border-box-sizing code_cell rendered">
+    <div class="input">
+
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">sampledf</span><span class="o">.</span><span class="n">columns</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Year&#39;</span><span class="p">,</span> <span class="s1">&#39;GHI&#39;</span><span class="p">,</span> <span class="s1">&#39;DHI&#39;</span><span class="p">,</span> <span class="s1">&#39;DNI&#39;</span><span class="p">,</span> <span class="s1">&#39;Wind Speed&#39;</span><span class="p">,</span> <span class="s1">&#39;Temperature&#39;</span><span class="p">]</span>
@@ -20830,8 +20987,7 @@ Name: Latitude, dtype: object</pre>
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[65]:</div>
-
+    
 
 
 <div class="output_html rendered_html output_subarea output_execute_result">
@@ -20917,10 +21073,14 @@ Name: Latitude, dtype: object</pre>
 </div>
 </div>
 
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[66]:</div>
+  </div>
+
+  
+
+  <div class="
+      cell border-box-sizing code_cell rendered">
+    <div class="input">
+
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">tsampledf</span><span class="o">.</span><span class="n">corr</span><span class="p">()</span>
@@ -20936,8 +21096,7 @@ Name: Latitude, dtype: object</pre>
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[66]:</div>
-
+    
 
 
 <div class="output_html rendered_html output_subarea output_execute_result">
@@ -21032,26 +21191,28 @@ Name: Latitude, dtype: object</pre>
 </div>
 </div>
 
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
+  </div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>Strong Correlation Between GHI, DHI and DNI. A degree of correlation also observed between GHI, Wind Speed and Temperature.</p>
 
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>Let's attempt to obtain data for all the major cities within the state of Florida.</p>
 
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[67]:</div>
+
+  
+
+  <div class="
+      cell border-box-sizing code_cell rendered">
+    <div class="input">
+
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">year</span> <span class="o">=</span> <span class="p">[</span><span class="mi">2020</span><span class="p">]</span>
@@ -21061,10 +21222,14 @@ Name: Latitude, dtype: object</pre>
 </div>
 </div>
 
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[68]:</div>
+  </div>
+
+  
+
+  <div class="
+      cell border-box-sizing code_cell rendered">
+    <div class="input">
+
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">SolarData</span> <span class="p">(</span><span class="n">names</span><span class="p">,</span> <span class="n">latitude</span><span class="p">,</span> <span class="n">longitude</span><span class="p">,</span> <span class="n">years</span><span class="p">):</span>
@@ -21124,10 +21289,14 @@ Name: Latitude, dtype: object</pre>
 </div>
 </div>
 
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[69]:</div>
+  </div>
+
+  
+
+  <div class="
+      cell border-box-sizing code_cell rendered">
+    <div class="input">
+
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">flor1_data</span> <span class="o">=</span> <span class="n">flor_data</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">10</span><span class="p">]</span>
@@ -21143,10 +21312,14 @@ Name: Latitude, dtype: object</pre>
 </div>
 </div>
 
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[70]:</div>
+  </div>
+
+  
+
+  <div class="
+      cell border-box-sizing code_cell rendered">
+    <div class="input">
+
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#flor1_data.head()</span>
@@ -21156,10 +21329,14 @@ Name: Latitude, dtype: object</pre>
 </div>
 </div>
 
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[72]:</div>
+  </div>
+
+  
+
+  <div class="
+      cell border-box-sizing code_cell rendered">
+    <div class="input">
+
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">mydata1</span> <span class="o">=</span> <span class="n">SolarData</span><span class="p">(</span><span class="n">flor1_data</span><span class="p">[</span><span class="s1">&#39;City&#39;</span><span class="p">],</span> <span class="n">flor1_data</span><span class="p">[</span><span class="s1">&#39;Latitude&#39;</span><span class="p">],</span> <span class="n">flor1_data</span><span class="p">[</span><span class="s1">&#39;Longitude&#39;</span><span class="p">],</span> <span class="n">year</span><span class="p">)</span>
@@ -21181,8 +21358,7 @@ Name: Latitude, dtype: object</pre>
 
 <div class="output_area">
 
-    <div class="prompt"></div>
-
+    
 
 <div class="output_subarea output_stream output_stderr output_text">
 <pre>/opt/conda/envs/Python-3.8-main/lib/python3.8/site-packages/pandas/core/frame.py:4308: SettingWithCopyWarning: 
@@ -21197,10 +21373,14 @@ See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stab
 </div>
 </div>
 
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[73]:</div>
+  </div>
+
+  
+
+  <div class="
+      cell border-box-sizing code_cell rendered">
+    <div class="input">
+
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">merged_df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">concat</span><span class="p">([</span><span class="n">mydata1</span><span class="p">,</span> <span class="n">mydata2</span><span class="p">,</span> <span class="n">mydata3</span><span class="p">,</span> <span class="n">mydata4</span><span class="p">,</span> <span class="n">mydata5</span><span class="p">,</span> <span class="n">mydata6</span><span class="p">,</span> <span class="n">mydata7</span><span class="p">])</span>
@@ -21211,10 +21391,14 @@ See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stab
 </div>
 </div>
 
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[74]:</div>
+  </div>
+
+  
+
+  <div class="
+      cell border-box-sizing code_cell rendered">
+    <div class="input">
+
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">merged_df</span>
@@ -21230,8 +21414,7 @@ See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stab
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[74]:</div>
-
+    
 
 
 <div class="output_html rendered_html output_subarea output_execute_result">
@@ -22079,10 +22262,14 @@ See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stab
 </div>
 </div>
 
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[75]:</div>
+  </div>
+
+  
+
+  <div class="
+      cell border-box-sizing code_cell rendered">
+    <div class="input">
+
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">merged_df</span><span class="o">.</span><span class="n">shape</span>
@@ -22098,8 +22285,7 @@ See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stab
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[75]:</div>
-
+    
 
 
 
@@ -22112,10 +22298,14 @@ See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stab
 </div>
 </div>
 
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[76]:</div>
+  </div>
+
+  
+
+  <div class="
+      cell border-box-sizing code_cell rendered">
+    <div class="input">
+
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#install yellowbrick cluster method</span>
@@ -22132,8 +22322,7 @@ See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stab
 
 <div class="output_area">
 
-    <div class="prompt"></div>
-
+    
 
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>Collecting yellowbrick
@@ -22160,10 +22349,14 @@ Successfully installed yellowbrick-1.3.post1
 </div>
 </div>
 
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[77]:</div>
+  </div>
+
+  
+
+  <div class="
+      cell border-box-sizing code_cell rendered">
+    <div class="input">
+
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">yellowbrick.cluster</span> <span class="kn">import</span> <span class="n">KElbowVisualizer</span>
@@ -22173,10 +22366,14 @@ Successfully installed yellowbrick-1.3.post1
 </div>
 </div>
 
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[78]:</div>
+  </div>
+
+  
+
+  <div class="
+      cell border-box-sizing code_cell rendered">
+    <div class="input">
+
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">mydata_no</span> <span class="o">=</span> <span class="n">merged_df</span><span class="o">.</span><span class="n">drop</span><span class="p">([</span><span class="s1">&#39;City&#39;</span><span class="p">,</span> <span class="s1">&#39;Latitude&#39;</span><span class="p">,</span> <span class="s1">&#39;Longitude&#39;</span><span class="p">],</span> <span class="n">axis</span> <span class="o">=</span> <span class="mi">1</span><span class="p">)</span>
@@ -22186,18 +22383,21 @@ Successfully installed yellowbrick-1.3.post1
 </div>
 </div>
 
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
+  </div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>Here, we determine the best K for our K means classifier using the KElbowVisualizer library.</p>
 
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[79]:</div>
+
+  
+
+  <div class="
+      cell border-box-sizing code_cell rendered">
+    <div class="input">
+
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">model</span> <span class="o">=</span> <span class="n">KMeans</span><span class="p">()</span>
@@ -22216,8 +22416,7 @@ Successfully installed yellowbrick-1.3.post1
 
 <div class="output_area">
 
-    <div class="prompt"></div>
-
+    
 
 <div class="output_subarea output_stream output_stderr output_text">
 <pre>findfont: Font family [&#39;sans-serif&#39;] not found. Falling back to DejaVu Sans.
@@ -22229,8 +22428,7 @@ findfont: Font family [&#39;sans-serif&#39;] not found. Falling back to DejaVu S
 
 <div class="output_area">
 
-    <div class="prompt"></div>
-
+    
 
 
 
@@ -22244,8 +22442,7 @@ findfont: Font family [&#39;sans-serif&#39;] not found. Falling back to DejaVu S
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[79]:</div>
-
+    
 
 
 
@@ -22258,10 +22455,14 @@ findfont: Font family [&#39;sans-serif&#39;] not found. Falling back to DejaVu S
 </div>
 </div>
 
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[80]:</div>
+  </div>
+
+  
+
+  <div class="
+      cell border-box-sizing code_cell rendered">
+    <div class="input">
+
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">kclusters</span> <span class="o">=</span> <span class="mi">3</span>
@@ -22283,8 +22484,7 @@ findfont: Font family [&#39;sans-serif&#39;] not found. Falling back to DejaVu S
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[80]:</div>
-
+    
 
 
 
@@ -22297,10 +22497,14 @@ findfont: Font family [&#39;sans-serif&#39;] not found. Falling back to DejaVu S
 </div>
 </div>
 
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[81]:</div>
+  </div>
+
+  
+
+  <div class="
+      cell border-box-sizing code_cell rendered">
+    <div class="input">
+
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">kmeans</span><span class="o">.</span><span class="n">labels_</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">10</span><span class="p">]</span>
@@ -22316,8 +22520,7 @@ findfont: Font family [&#39;sans-serif&#39;] not found. Falling back to DejaVu S
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[81]:</div>
-
+    
 
 
 
@@ -22330,10 +22533,14 @@ findfont: Font family [&#39;sans-serif&#39;] not found. Falling back to DejaVu S
 </div>
 </div>
 
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[82]:</div>
+  </div>
+
+  
+
+  <div class="
+      cell border-box-sizing code_cell rendered">
+    <div class="input">
+
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># add clustering labels</span>
@@ -22352,8 +22559,7 @@ findfont: Font family [&#39;sans-serif&#39;] not found. Falling back to DejaVu S
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[82]:</div>
-
+    
 
 
 <div class="output_html rendered_html output_subarea output_execute_result">
@@ -22463,10 +22669,14 @@ findfont: Font family [&#39;sans-serif&#39;] not found. Falling back to DejaVu S
 </div>
 </div>
 
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[83]:</div>
+  </div>
+
+  
+
+  <div class="
+      cell border-box-sizing code_cell rendered">
+    <div class="input">
+
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># create map</span>
@@ -22504,8 +22714,7 @@ findfont: Font family [&#39;sans-serif&#39;] not found. Falling back to DejaVu S
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[83]:</div>
-
+    
 
 
 <div class="output_html rendered_html output_subarea output_execute_result">
@@ -22517,10 +22726,14 @@ findfont: Font family [&#39;sans-serif&#39;] not found. Falling back to DejaVu S
 </div>
 </div>
 
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+  </div>
+
+  
+
+  <div class="
+      cell border-box-sizing code_cell rendered">
+    <div class="input">
+
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">nbi</span><span class="o">.</span><span class="n">publish</span><span class="p">(</span><span class="s1">&#39;damianohienmhen/IBM/main&#39;</span><span class="p">,</span> <span class="s1">&#39;IBMHackathon.ipynb&#39;</span><span class="p">)</span>
@@ -22530,10 +22743,14 @@ findfont: Font family [&#39;sans-serif&#39;] not found. Falling back to DejaVu S
 </div>
 </div>
 
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[84]:</div>
+  </div>
+
+  
+
+  <div class="
+      cell border-box-sizing code_cell rendered">
+    <div class="input">
+
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># This cluster (red on map) on visual investigation show the least averages across the DHI, DNI and GHI data points. Classed as the 3rd best choice for </span>
@@ -22551,8 +22768,7 @@ findfont: Font family [&#39;sans-serif&#39;] not found. Falling back to DejaVu S
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[84]:</div>
-
+    
 
 
 <div class="output_html rendered_html output_subarea output_execute_result">
@@ -23039,10 +23255,14 @@ findfont: Font family [&#39;sans-serif&#39;] not found. Falling back to DejaVu S
 </div>
 </div>
 
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[85]:</div>
+  </div>
+
+  
+
+  <div class="
+      cell border-box-sizing code_cell rendered">
+    <div class="input">
+
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># This cluster (purple on map) has on average higher mean DHI, GHI and DNI mean values across all data points. These locations provide the best </span>
@@ -23060,8 +23280,7 @@ findfont: Font family [&#39;sans-serif&#39;] not found. Falling back to DejaVu S
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[85]:</div>
-
+    
 
 
 <div class="output_html rendered_html output_subarea output_execute_result">
@@ -23327,10 +23546,14 @@ findfont: Font family [&#39;sans-serif&#39;] not found. Falling back to DejaVu S
 </div>
 </div>
 
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[86]:</div>
+  </div>
+
+  
+
+  <div class="
+      cell border-box-sizing code_cell rendered">
+    <div class="input">
+
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># This cluster (light green on map) shows high means across the DHI, DNI and GHI data points as well. Would be classed as 2nd best alternative for </span>
@@ -23348,8 +23571,7 @@ findfont: Font family [&#39;sans-serif&#39;] not found. Falling back to DejaVu S
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[86]:</div>
-
+    
 
 
 <div class="output_html rendered_html output_subarea output_execute_result">
@@ -23602,26 +23824,28 @@ findfont: Font family [&#39;sans-serif&#39;] not found. Falling back to DejaVu S
 </div>
 </div>
 
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
+  </div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>Next, we obtain data to address the question of optimizing energy production and reduce areas of inefficient Energy Usage</p>
 
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>Data downloaded from the Florida Municipal Electric Association's website <a href="https://assets.noviams.com/novi-file-uploads/fmea/Stats/2019_florida_publicpower_utility_statistical_information.xls">https://assets.noviams.com/novi-file-uploads/fmea/Stats/2019_florida_publicpower_utility_statistical_information.xls</a></p>
 
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[87]:</div>
+
+  
+
+  <div class="
+      cell border-box-sizing code_cell rendered">
+    <div class="input">
+
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">os</span><span class="o">,</span> <span class="nn">types</span>
@@ -23663,8 +23887,7 @@ findfont: Font family [&#39;sans-serif&#39;] not found. Falling back to DejaVu S
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[87]:</div>
-
+    
 
 
 <div class="output_html rendered_html output_subarea output_execute_result">
@@ -23810,10 +24033,14 @@ findfont: Font family [&#39;sans-serif&#39;] not found. Falling back to DejaVu S
 </div>
 </div>
 
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[88]:</div>
+  </div>
+
+  
+
+  <div class="
+      cell border-box-sizing code_cell rendered">
+    <div class="input">
+
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">late_list</span> <span class="o">=</span> <span class="p">[]</span>
@@ -23832,10 +24059,14 @@ findfont: Font family [&#39;sans-serif&#39;] not found. Falling back to DejaVu S
 </div>
 </div>
 
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[89]:</div>
+  </div>
+
+  
+
+  <div class="
+      cell border-box-sizing code_cell rendered">
+    <div class="input">
+
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">df_data_0</span><span class="o">.</span><span class="n">columns</span>
@@ -23851,8 +24082,7 @@ findfont: Font family [&#39;sans-serif&#39;] not found. Falling back to DejaVu S
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[89]:</div>
-
+    
 
 
 
@@ -23870,10 +24100,14 @@ findfont: Font family [&#39;sans-serif&#39;] not found. Falling back to DejaVu S
 </div>
 </div>
 
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[195]:</div>
+  </div>
+
+  
+
+  <div class="
+      cell border-box-sizing code_cell rendered">
+    <div class="input">
+
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">df_data_0</span><span class="p">[</span><span class="s1">&#39;kWh Sales (retail)&#39;</span><span class="p">]</span>  <span class="o">=</span> <span class="n">df_data_0</span><span class="p">[</span><span class="s1">&#39;kWh Sales (retail)&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">fillna</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
@@ -23884,10 +24118,14 @@ findfont: Font family [&#39;sans-serif&#39;] not found. Falling back to DejaVu S
 </div>
 </div>
 
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[196]:</div>
+  </div>
+
+  
+
+  <div class="
+      cell border-box-sizing code_cell rendered">
+    <div class="input">
+
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">df_data_0</span><span class="p">[</span><span class="s1">&#39;kWh Sales (retail)&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span><span class="n">df_data_0</span><span class="p">[</span><span class="s1">&#39;kWh Sales (retail)&#39;</span><span class="p">])</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">int</span><span class="p">)</span>
@@ -23898,10 +24136,14 @@ findfont: Font family [&#39;sans-serif&#39;] not found. Falling back to DejaVu S
 </div>
 </div>
 
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[197]:</div>
+  </div>
+
+  
+
+  <div class="
+      cell border-box-sizing code_cell rendered">
+    <div class="input">
+
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">utility_member</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">df_data_0</span><span class="p">[</span><span class="s1">&#39;Utility Member&#39;</span><span class="p">])</span>
@@ -23930,8 +24172,7 @@ findfont: Font family [&#39;sans-serif&#39;] not found. Falling back to DejaVu S
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[197]:</div>
-
+    
 
 
 <div class="output_html rendered_html output_subarea output_execute_result">
@@ -37614,10 +37855,14 @@ findfont: Font family [&#39;sans-serif&#39;] not found. Falling back to DejaVu S
 </div>
 </div>
 
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[198]:</div>
+  </div>
+
+  
+
+  <div class="
+      cell border-box-sizing code_cell rendered">
+    <div class="input">
+
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">utility_data</span><span class="o">.</span><span class="n">corr</span><span class="p">()</span>
@@ -37633,8 +37878,7 @@ findfont: Font family [&#39;sans-serif&#39;] not found. Falling back to DejaVu S
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[198]:</div>
-
+    
 
 
 <div class="output_html rendered_html output_subarea output_execute_result">
@@ -37746,9 +37990,8 @@ findfont: Font family [&#39;sans-serif&#39;] not found. Falling back to DejaVu S
 </div>
 </div>
 
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
+  </div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>Positive Correlation Exists Between Total kWh Sales, Peak Power Generation and Municipal Population. Weak correlation between kWh Sales and Energy
 per Capita. However, all these Data Points will be used for Machine Learning Algorithm.</p>
@@ -37756,9 +37999,13 @@ per Capita. However, all these Data Points will be used for Machine Learning Alg
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[227]:</div>
+
+  
+
+  <div class="
+      cell border-box-sizing code_cell rendered">
+    <div class="input">
+
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#Making copy of dataframe for future machine learning algorithms</span>
@@ -37770,10 +38017,14 @@ per Capita. However, all these Data Points will be used for Machine Learning Alg
 </div>
 </div>
 
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[228]:</div>
+  </div>
+
+  
+
+  <div class="
+      cell border-box-sizing code_cell rendered">
+    <div class="input">
+
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">mydata_noyr</span> <span class="o">=</span> <span class="n">mydata_no1</span><span class="o">.</span><span class="n">drop</span><span class="p">([</span><span class="s1">&#39;Utility Member&#39;</span><span class="p">,</span> <span class="s1">&#39;Year&#39;</span><span class="p">,</span> <span class="s1">&#39;Latitude&#39;</span><span class="p">,</span> <span class="s1">&#39;Longitude&#39;</span><span class="p">],</span> <span class="n">axis</span> <span class="o">=</span> <span class="mi">1</span><span class="p">)</span>
@@ -37783,10 +38034,14 @@ per Capita. However, all these Data Points will be used for Machine Learning Alg
 </div>
 </div>
 
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[229]:</div>
+  </div>
+
+  
+
+  <div class="
+      cell border-box-sizing code_cell rendered">
+    <div class="input">
+
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">mydata_noyr</span>
@@ -37802,8 +38057,7 @@ per Capita. However, all these Data Points will be used for Machine Learning Alg
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[229]:</div>
-
+    
 
 
 <div class="output_html rendered_html output_subarea output_execute_result">
@@ -38059,10 +38313,14 @@ per Capita. However, all these Data Points will be used for Machine Learning Alg
 </div>
 </div>
 
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[230]:</div>
+  </div>
+
+  
+
+  <div class="
+      cell border-box-sizing code_cell rendered">
+    <div class="input">
+
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#making a copy of dataframe for future Machine Learning Algorithms</span>
@@ -38073,18 +38331,21 @@ per Capita. However, all these Data Points will be used for Machine Learning Alg
 </div>
 </div>
 
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
+  </div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>Lets try to use the K-Means algorithm to obtain insight into the data set</p>
 
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[231]:</div>
+
+  
+
+  <div class="
+      cell border-box-sizing code_cell rendered">
+    <div class="input">
+
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">model1</span> <span class="o">=</span> <span class="n">KMeans</span><span class="p">()</span>
@@ -38103,8 +38364,7 @@ per Capita. However, all these Data Points will be used for Machine Learning Alg
 
 <div class="output_area">
 
-    <div class="prompt"></div>
-
+    
 
 
 
@@ -38118,8 +38378,7 @@ per Capita. However, all these Data Points will be used for Machine Learning Alg
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[231]:</div>
-
+    
 
 
 
@@ -38132,10 +38391,14 @@ per Capita. However, all these Data Points will be used for Machine Learning Alg
 </div>
 </div>
 
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[232]:</div>
+  </div>
+
+  
+
+  <div class="
+      cell border-box-sizing code_cell rendered">
+    <div class="input">
+
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">kclusters1</span> <span class="o">=</span> <span class="mi">2</span>
@@ -38157,8 +38420,7 @@ per Capita. However, all these Data Points will be used for Machine Learning Alg
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[232]:</div>
-
+    
 
 
 
@@ -38171,10 +38433,14 @@ per Capita. However, all these Data Points will be used for Machine Learning Alg
 </div>
 </div>
 
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[233]:</div>
+  </div>
+
+  
+
+  <div class="
+      cell border-box-sizing code_cell rendered">
+    <div class="input">
+
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># add clustering labels</span>
@@ -38193,8 +38459,7 @@ per Capita. However, all these Data Points will be used for Machine Learning Alg
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[233]:</div>
-
+    
 
 
 <div class="output_html rendered_html output_subarea output_execute_result">
@@ -38298,10 +38563,14 @@ per Capita. However, all these Data Points will be used for Machine Learning Alg
 </div>
 </div>
 
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[234]:</div>
+  </div>
+
+  
+
+  <div class="
+      cell border-box-sizing code_cell rendered">
+    <div class="input">
+
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">mydata_no1</span>
@@ -38317,8 +38586,7 @@ per Capita. However, all these Data Points will be used for Machine Learning Alg
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[234]:</div>
-
+    
 
 
 <div class="output_html rendered_html output_subarea output_execute_result">
@@ -38734,10 +39002,14 @@ per Capita. However, all these Data Points will be used for Machine Learning Alg
 </div>
 </div>
 
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[235]:</div>
+  </div>
+
+  
+
+  <div class="
+      cell border-box-sizing code_cell rendered">
+    <div class="input">
+
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># create map</span>
@@ -38775,8 +39047,7 @@ per Capita. However, all these Data Points will be used for Machine Learning Alg
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[235]:</div>
-
+    
 
 
 <div class="output_html rendered_html output_subarea output_execute_result">
@@ -38788,10 +39059,14 @@ per Capita. However, all these Data Points will be used for Machine Learning Alg
 </div>
 </div>
 
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[236]:</div>
+  </div>
+
+  
+
+  <div class="
+      cell border-box-sizing code_cell rendered">
+    <div class="input">
+
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">mydata_no1</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">mydata_no1</span><span class="p">[</span><span class="s1">&#39;Cluster Labels&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="mi">0</span><span class="p">]</span>
@@ -38807,8 +39082,7 @@ per Capita. However, all these Data Points will be used for Machine Learning Alg
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[236]:</div>
-
+    
 
 
 <div class="output_html rendered_html output_subarea output_execute_result">
@@ -39200,10 +39474,14 @@ per Capita. However, all these Data Points will be used for Machine Learning Alg
 </div>
 </div>
 
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[237]:</div>
+  </div>
+
+  
+
+  <div class="
+      cell border-box-sizing code_cell rendered">
+    <div class="input">
+
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">mydata_no1</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">mydata_no1</span><span class="p">[</span><span class="s1">&#39;Cluster Labels&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="mi">1</span><span class="p">]</span>
@@ -39219,8 +39497,7 @@ per Capita. However, all these Data Points will be used for Machine Learning Alg
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[237]:</div>
-
+    
 
 
 <div class="output_html rendered_html output_subarea output_execute_result">
@@ -39288,26 +39565,28 @@ per Capita. However, all these Data Points will be used for Machine Learning Alg
 </div>
 </div>
 
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
+  </div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>From the data clusters generated, the K-Means algorithm did not provide reasonable insight into the data</p>
 
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>Next, we will use the K-Means algorithm to target areas of in-efficient energy production</p>
 
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[238]:</div>
+
+  
+
+  <div class="
+      cell border-box-sizing code_cell rendered">
+    <div class="input">
+
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">mydata_no2</span> <span class="o">=</span> <span class="n">utility_data</span><span class="p">[</span><span class="n">utility_data</span><span class="p">[</span><span class="s1">&#39;Year&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="mi">2019</span><span class="p">]</span>
@@ -39317,10 +39596,14 @@ per Capita. However, all these Data Points will be used for Machine Learning Alg
 </div>
 </div>
 
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[239]:</div>
+  </div>
+
+  
+
+  <div class="
+      cell border-box-sizing code_cell rendered">
+    <div class="input">
+
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">mydata_nopwr</span> <span class="o">=</span> <span class="n">mydata_no2</span><span class="o">.</span><span class="n">drop</span><span class="p">([</span><span class="s1">&#39;Utility Member&#39;</span><span class="p">,</span> <span class="s1">&#39;Year&#39;</span><span class="p">,</span> <span class="s1">&#39;Latitude&#39;</span><span class="p">,</span> <span class="s1">&#39;Longitude&#39;</span><span class="p">,</span> <span class="s1">&#39;Total kWh Sales&#39;</span><span class="p">,</span> <span class="s1">&#39;Peak Power Generation (MW)&#39;</span><span class="p">],</span> <span class="n">axis</span> <span class="o">=</span> <span class="mi">1</span><span class="p">)</span>
@@ -39330,10 +39613,14 @@ per Capita. However, all these Data Points will be used for Machine Learning Alg
 </div>
 </div>
 
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[240]:</div>
+  </div>
+
+  
+
+  <div class="
+      cell border-box-sizing code_cell rendered">
+    <div class="input">
+
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">mydata_nopwr</span>
@@ -39349,8 +39636,7 @@ per Capita. However, all these Data Points will be used for Machine Learning Alg
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[240]:</div>
-
+    
 
 
 <div class="output_html rendered_html output_subarea output_execute_result">
@@ -39542,10 +39828,14 @@ per Capita. However, all these Data Points will be used for Machine Learning Alg
 </div>
 </div>
 
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[241]:</div>
+  </div>
+
+  
+
+  <div class="
+      cell border-box-sizing code_cell rendered">
+    <div class="input">
+
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">mydata_nopwr</span><span class="o">.</span><span class="n">corr</span><span class="p">()</span>
@@ -39561,8 +39851,7 @@ per Capita. However, all these Data Points will be used for Machine Learning Alg
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[241]:</div>
-
+    
 
 
 <div class="output_html rendered_html output_subarea output_execute_result">
@@ -39609,10 +39898,14 @@ per Capita. However, all these Data Points will be used for Machine Learning Alg
 </div>
 </div>
 
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[242]:</div>
+  </div>
+
+  
+
+  <div class="
+      cell border-box-sizing code_cell rendered">
+    <div class="input">
+
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">model2</span> <span class="o">=</span> <span class="n">KMeans</span><span class="p">()</span>
@@ -39631,8 +39924,7 @@ per Capita. However, all these Data Points will be used for Machine Learning Alg
 
 <div class="output_area">
 
-    <div class="prompt"></div>
-
+    
 
 
 
@@ -39646,8 +39938,7 @@ per Capita. However, all these Data Points will be used for Machine Learning Alg
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[242]:</div>
-
+    
 
 
 
@@ -39660,10 +39951,14 @@ per Capita. However, all these Data Points will be used for Machine Learning Alg
 </div>
 </div>
 
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[243]:</div>
+  </div>
+
+  
+
+  <div class="
+      cell border-box-sizing code_cell rendered">
+    <div class="input">
+
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">kclusters2</span> <span class="o">=</span> <span class="mi">2</span>
@@ -39685,8 +39980,7 @@ per Capita. However, all these Data Points will be used for Machine Learning Alg
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[243]:</div>
-
+    
 
 
 
@@ -39699,10 +39993,14 @@ per Capita. However, all these Data Points will be used for Machine Learning Alg
 </div>
 </div>
 
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[244]:</div>
+  </div>
+
+  
+
+  <div class="
+      cell border-box-sizing code_cell rendered">
+    <div class="input">
+
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># add clustering labels</span>
@@ -39721,8 +40019,7 @@ per Capita. However, all these Data Points will be used for Machine Learning Alg
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[244]:</div>
-
+    
 
 
 <div class="output_html rendered_html output_subarea output_execute_result">
@@ -39826,10 +40123,14 @@ per Capita. However, all these Data Points will be used for Machine Learning Alg
 </div>
 </div>
 
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[275]:</div>
+  </div>
+
+  
+
+  <div class="
+      cell border-box-sizing code_cell rendered">
+    <div class="input">
+
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># create map</span>
@@ -39867,8 +40168,7 @@ per Capita. However, all these Data Points will be used for Machine Learning Alg
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[275]:</div>
-
+    
 
 
 <div class="output_html rendered_html output_subarea output_execute_result">
@@ -39880,10 +40180,14 @@ per Capita. However, all these Data Points will be used for Machine Learning Alg
 </div>
 </div>
 
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[246]:</div>
+  </div>
+
+  
+
+  <div class="
+      cell border-box-sizing code_cell rendered">
+    <div class="input">
+
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">mydata_no2</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">mydata_no2</span><span class="p">[</span><span class="s1">&#39;Cluster Labels&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="mi">0</span><span class="p">]</span>
@@ -39899,8 +40203,7 @@ per Capita. However, all these Data Points will be used for Machine Learning Alg
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[246]:</div>
-
+    
 
 
 <div class="output_html rendered_html output_subarea output_execute_result">
@@ -40304,10 +40607,14 @@ per Capita. However, all these Data Points will be used for Machine Learning Alg
 </div>
 </div>
 
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[247]:</div>
+  </div>
+
+  
+
+  <div class="
+      cell border-box-sizing code_cell rendered">
+    <div class="input">
+
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">mydata_no2</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">mydata_no2</span><span class="p">[</span><span class="s1">&#39;Cluster Labels&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="mi">1</span><span class="p">]</span>
@@ -40323,8 +40630,7 @@ per Capita. However, all these Data Points will be used for Machine Learning Alg
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[247]:</div>
-
+    
 
 
 <div class="output_html rendered_html output_subarea output_execute_result">
@@ -40380,26 +40686,28 @@ per Capita. However, all these Data Points will be used for Machine Learning Alg
 </div>
 </div>
 
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
+  </div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>No real insight gleaned from K-means algorithm on Energy per Capita data</p>
 
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>Let us run a DBSCAN Machine learning algorithm to see if any real cluster information is generated between the data points</p>
 
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[248]:</div>
+
+  
+
+  <div class="
+      cell border-box-sizing code_cell rendered">
+    <div class="input">
+
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.cluster</span> <span class="kn">import</span> <span class="n">DBSCAN</span>
@@ -40410,10 +40718,14 @@ per Capita. However, all these Data Points will be used for Machine Learning Alg
 </div>
 </div>
 
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[253]:</div>
+  </div>
+
+  
+
+  <div class="
+      cell border-box-sizing code_cell rendered">
+    <div class="input">
+
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">X</span> <span class="o">=</span> <span class="n">mydata_noyryr</span>
@@ -40424,10 +40736,14 @@ per Capita. However, all these Data Points will be used for Machine Learning Alg
 </div>
 </div>
 
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[254]:</div>
+  </div>
+
+  
+
+  <div class="
+      cell border-box-sizing code_cell rendered">
+    <div class="input">
+
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">X1</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
@@ -40443,8 +40759,7 @@ per Capita. However, all these Data Points will be used for Machine Learning Alg
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[254]:</div>
-
+    
 
 
 <div class="output_html rendered_html output_subarea output_execute_result">
@@ -40518,10 +40833,14 @@ per Capita. However, all these Data Points will be used for Machine Learning Alg
 </div>
 </div>
 
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[255]:</div>
+  </div>
+
+  
+
+  <div class="
+      cell border-box-sizing code_cell rendered">
+    <div class="input">
+
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">scaler</span> <span class="o">=</span> <span class="n">StandardScaler</span><span class="p">()</span>
@@ -40532,10 +40851,14 @@ per Capita. However, all these Data Points will be used for Machine Learning Alg
 </div>
 </div>
 
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[256]:</div>
+  </div>
+
+  
+
+  <div class="
+      cell border-box-sizing code_cell rendered">
+    <div class="input">
+
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># cluster the data into five clusters</span>
@@ -40547,10 +40870,14 @@ per Capita. However, all these Data Points will be used for Machine Learning Alg
 </div>
 </div>
 
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[257]:</div>
+  </div>
+
+  
+
+  <div class="
+      cell border-box-sizing code_cell rendered">
+    <div class="input">
+
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">clusters</span>
@@ -40566,8 +40893,7 @@ per Capita. However, all these Data Points will be used for Machine Learning Alg
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[257]:</div>
-
+    
 
 
 
@@ -40581,10 +40907,14 @@ per Capita. However, all these Data Points will be used for Machine Learning Alg
 </div>
 </div>
 
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[258]:</div>
+  </div>
+
+  
+
+  <div class="
+      cell border-box-sizing code_cell rendered">
+    <div class="input">
+
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">dbscan</span><span class="o">.</span><span class="n">labels_</span>
@@ -40600,8 +40930,7 @@ per Capita. However, all these Data Points will be used for Machine Learning Alg
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[258]:</div>
-
+    
 
 
 
@@ -40615,10 +40944,14 @@ per Capita. However, all these Data Points will be used for Machine Learning Alg
 </div>
 </div>
 
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[259]:</div>
+  </div>
+
+  
+
+  <div class="
+      cell border-box-sizing code_cell rendered">
+    <div class="input">
+
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">mydata_noyrcl</span> <span class="o">=</span> <span class="n">mydata_noyryr</span>
@@ -40628,10 +40961,14 @@ per Capita. However, all these Data Points will be used for Machine Learning Alg
 </div>
 </div>
 
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[260]:</div>
+  </div>
+
+  
+
+  <div class="
+      cell border-box-sizing code_cell rendered">
+    <div class="input">
+
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">mydata_noyrcl</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="s1">&#39;Cluster Labels&#39;</span><span class="p">,</span> <span class="n">dbscan</span><span class="o">.</span><span class="n">labels_</span><span class="p">)</span>
@@ -40641,10 +40978,14 @@ per Capita. However, all these Data Points will be used for Machine Learning Alg
 </div>
 </div>
 
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[264]:</div>
+  </div>
+
+  
+
+  <div class="
+      cell border-box-sizing code_cell rendered">
+    <div class="input">
+
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">mydata_noyrcl</span>
@@ -40660,8 +41001,7 @@ per Capita. However, all these Data Points will be used for Machine Learning Alg
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[264]:</div>
-
+    
 
 
 <div class="output_html rendered_html output_subarea output_execute_result">
@@ -41077,10 +41417,14 @@ per Capita. However, all these Data Points will be used for Machine Learning Alg
 </div>
 </div>
 
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[276]:</div>
+  </div>
+
+  
+
+  <div class="
+      cell border-box-sizing code_cell rendered">
+    <div class="input">
+
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># create map</span>
@@ -41118,8 +41462,7 @@ per Capita. However, all these Data Points will be used for Machine Learning Alg
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[276]:</div>
-
+    
 
 
 <div class="output_html rendered_html output_subarea output_execute_result">
@@ -41131,10 +41474,14 @@ per Capita. However, all these Data Points will be used for Machine Learning Alg
 </div>
 </div>
 
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[269]:</div>
+  </div>
+
+  
+
+  <div class="
+      cell border-box-sizing code_cell rendered">
+    <div class="input">
+
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#This cluster has the largest Energy per Capita in comparison to the rest of the clusters. They also have on average larger Municipal Populations.</span>
@@ -41152,8 +41499,7 @@ per Capita. However, all these Data Points will be used for Machine Learning Alg
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[269]:</div>
-
+    
 
 
 <div class="output_html rendered_html output_subarea output_execute_result">
@@ -41425,10 +41771,14 @@ per Capita. However, all these Data Points will be used for Machine Learning Alg
 </div>
 </div>
 
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[270]:</div>
+  </div>
+
+  
+
+  <div class="
+      cell border-box-sizing code_cell rendered">
+    <div class="input">
+
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#This cluster has higher than normal Energy per Capita for its population size, indicating inefficient energy usage within this region.</span>
@@ -41445,8 +41795,7 @@ per Capita. However, all these Data Points will be used for Machine Learning Alg
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[270]:</div>
-
+    
 
 
 <div class="output_html rendered_html output_subarea output_execute_result">
@@ -41574,10 +41923,14 @@ per Capita. However, all these Data Points will be used for Machine Learning Alg
 </div>
 </div>
 
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[271]:</div>
+  </div>
+
+  
+
+  <div class="
+      cell border-box-sizing code_cell rendered">
+    <div class="input">
+
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#These areas have the largest kWh Sales in comparison to the rest of the clusters. Given its population size, This could indicate an overproduction</span>
@@ -41595,8 +41948,7 @@ per Capita. However, all these Data Points will be used for Machine Learning Alg
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[271]:</div>
-
+    
 
 
 <div class="output_html rendered_html output_subarea output_execute_result">
@@ -41676,10 +42028,14 @@ per Capita. However, all these Data Points will be used for Machine Learning Alg
 </div>
 </div>
 
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[272]:</div>
+  </div>
+
+  
+
+  <div class="
+      cell border-box-sizing code_cell rendered">
+    <div class="input">
+
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#This cluster has lower than average Energy per capita and moderate population sizes. No determination on the relevance of this cluser made.</span>
@@ -41696,8 +42052,7 @@ per Capita. However, all these Data Points will be used for Machine Learning Alg
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[272]:</div>
-
+    
 
 
 <div class="output_html rendered_html output_subarea output_execute_result">
@@ -41765,10 +42120,14 @@ per Capita. However, all these Data Points will be used for Machine Learning Alg
 </div>
 </div>
 
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+  </div>
+
+  
+
+  <div class="
+      cell border-box-sizing code_cell rendered">
+    <div class="input">
+
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span> 
@@ -41778,10 +42137,14 @@ per Capita. However, all these Data Points will be used for Machine Learning Alg
 </div>
 </div>
 
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+  </div>
+
+  
+
+  <div class="
+      cell border-box-sizing code_cell rendered">
+    <div class="input">
+
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span> 
@@ -41791,10 +42154,14 @@ per Capita. However, all these Data Points will be used for Machine Learning Alg
 </div>
 </div>
 
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+  </div>
+
+  
+
+  <div class="
+      cell border-box-sizing code_cell rendered">
+    <div class="input">
+
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span> 
@@ -41804,12 +42171,30 @@ per Capita. However, all these Data Points will be used for Machine Learning Alg
 </div>
 </div>
 
-</div>
+  </div>
+
+
+
+<!-- Loads nbinteract package -->
+<script src="https://unpkg.com/nbinteract-core" async></script>
+<script>
+  (function setupNbinteract() {
+    // If NbInteract hasn't loaded, wait one second and try again
+    if (window.NbInteract === undefined) {
+      setTimeout(setupNbinteract, 1000)
+      return
+    }
+
+    var interact = new window.NbInteract({
+      spec: 'damianohienmhen/IBM/master',
+      baseUrl: 'https://mybinder.org',
+      provider: 'gh',
+    })
+    interact.prepare()
+
+    window.interact = interact
+  })()
+</script>
     </div>
   </div>
 </body>
-
- 
-
-
-</html>
