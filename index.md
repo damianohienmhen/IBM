@@ -25,7 +25,7 @@ Syntax highlighted code block
 
 [Link](url) and ![Image](src)
 ```
-<a href = "/IBM/IBMHackathon.ipynb">Hackathon</a>
+<a href = "IBM/IBMHackathon.ipynb">Hackathon</a>
 For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
 
 ### Jekyll Themes
