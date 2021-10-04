@@ -13034,8 +13034,6 @@ body {
 div#notebook {
   overflow: visible;
   border-top: none;
-}div#notebook-container{
-  padding: 6ex 12ex 8ex 12ex;
 }@media print {
   div.cell {
     display: block;
@@ -13086,7 +13084,11 @@ div#notebook {
 <div class="output_wrapper">
 <div class="output">
 
+
 <div class="output_area">
+
+    <div class="prompt output_prompt">Out[1]:</div>
+
 
 
 <div class="output_html rendered_html output_subarea output_execute_result">
@@ -13119,40 +13121,17 @@ $( document ).ready(code_toggle);
 </div>
 </div>
 
-</div># This is a cell to hide code snippets from displaying
-# This must be at first cell!
-
-from IPython.display import HTML
-
-hide_me = ''
-HTML('''<script>
-code_show=true; 
-function code_toggle() {
-  if (code_show) {
-    $('div.input').each(function(id) {
-      el = $(this).find('.cm-variable:first');
-      if (id == 0 || el.text() == 'hide_me') {
-        $(this).hide();
-      }
-    });
-    $('div.output_prompt').css('opacity', 0);
-  } else {
-    $('div.input').each(function(id) {
-      $(this).show();
-    });
-    $('div.output_prompt').css('opacity', 1);
-  }
-  code_show = !code_show
-} 
-$( document ).ready(code_toggle);
-</script>
-<form action="javascript:code_toggle()"><input style="opacity:0" type="submit" value="Click here to toggle on/off the raw code."></form>''')
+</div>
 <div class="cell border-box-sizing code_cell rendered">
 
 <div class="output_wrapper">
 <div class="output">
 
+
 <div class="output_area">
+
+    <div class="prompt"></div>
+
 
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>Collecting geojson
@@ -13162,78 +13141,77 @@ Successfully installed geojson-2.5.0
 Libraries imported.
 Collecting folium
   Downloading folium-0.12.1-py2.py3-none-any.whl (94 kB)
-     |████████████████████████████████| 94 kB 6.4 MB/s  eta 0:00:01
+     |████████████████████████████████| 94 kB 6.6 MB/s  eta 0:00:01
+Requirement already satisfied: jinja2&gt;=2.9 in /opt/conda/envs/Python-3.8-main/lib/python3.8/site-packages (from folium) (3.0.0)
 Requirement already satisfied: requests in /opt/conda/envs/Python-3.8-main/lib/python3.8/site-packages (from folium) (2.25.1)
+Requirement already satisfied: numpy in /opt/conda/envs/Python-3.8-main/lib/python3.8/site-packages (from folium) (1.19.2)
 Collecting branca&gt;=0.3.0
   Downloading branca-0.4.2-py3-none-any.whl (24 kB)
-Requirement already satisfied: jinja2&gt;=2.9 in /opt/conda/envs/Python-3.8-main/lib/python3.8/site-packages (from folium) (3.0.0)
-Requirement already satisfied: numpy in /opt/conda/envs/Python-3.8-main/lib/python3.8/site-packages (from folium) (1.19.2)
 Requirement already satisfied: MarkupSafe&gt;=2.0.0rc2 in /opt/conda/envs/Python-3.8-main/lib/python3.8/site-packages (from jinja2&gt;=2.9-&gt;folium) (2.0.1)
-Requirement already satisfied: certifi&gt;=2017.4.17 in /opt/conda/envs/Python-3.8-main/lib/python3.8/site-packages (from requests-&gt;folium) (2021.5.30)
 Requirement already satisfied: idna&lt;3,&gt;=2.5 in /opt/conda/envs/Python-3.8-main/lib/python3.8/site-packages (from requests-&gt;folium) (2.8)
 Requirement already satisfied: chardet&lt;5,&gt;=3.0.2 in /opt/conda/envs/Python-3.8-main/lib/python3.8/site-packages (from requests-&gt;folium) (3.0.4)
 Requirement already satisfied: urllib3&lt;1.27,&gt;=1.21.1 in /opt/conda/envs/Python-3.8-main/lib/python3.8/site-packages (from requests-&gt;folium) (1.26.6)
+Requirement already satisfied: certifi&gt;=2017.4.17 in /opt/conda/envs/Python-3.8-main/lib/python3.8/site-packages (from requests-&gt;folium) (2021.5.30)
 Installing collected packages: branca, folium
 Successfully installed branca-0.4.2 folium-0.12.1
 Collecting nbinteract
   Downloading nbinteract-0.2.6-py3-none-any.whl (29 kB)
-Requirement already satisfied: IPython&lt;8,&gt;=6 in /opt/conda/envs/Python-3.8-main/lib/python3.8/site-packages (from nbinteract) (7.22.0)
-Collecting bqplot==0.11.0
-  Downloading bqplot-0.11.0-py2.py3-none-any.whl (1.5 MB)
-     |████████████████████████████████| 1.5 MB 37.2 MB/s eta 0:00:01
-Requirement already satisfied: toolz&lt;1,&gt;=0.8 in /opt/conda/envs/Python-3.8-main/lib/python3.8/site-packages (from nbinteract) (0.11.1)
-Collecting traitlets&lt;5,&gt;=4.3
-  Downloading traitlets-4.3.3-py2.py3-none-any.whl (75 kB)
-     |████████████████████████████████| 75 kB 10.1 MB/s eta 0:00:01
-Collecting nbformat&lt;5,&gt;=4.4.0
-  Downloading nbformat-4.4.0-py2.py3-none-any.whl (155 kB)
-     |████████████████████████████████| 155 kB 53.3 MB/s eta 0:00:01
-Requirement already satisfied: numpy&lt;2,&gt;=1 in /opt/conda/envs/Python-3.8-main/lib/python3.8/site-packages (from nbinteract) (1.19.2)
-Collecting Jinja2&lt;3,&gt;=2.10
-  Downloading Jinja2-2.11.3-py2.py3-none-any.whl (125 kB)
-     |████████████████████████████████| 125 kB 48.5 MB/s eta 0:00:01
-Requirement already satisfied: ipywidgets&lt;8,&gt;=7.5.0 in /opt/conda/envs/Python-3.8-main/lib/python3.8/site-packages (from nbinteract) (7.6.3)
-Requirement already satisfied: nbconvert&gt;=5.3 in /opt/conda/envs/Python-3.8-main/lib/python3.8/site-packages (from nbinteract) (6.0.7)
 Collecting docopt&lt;1,&gt;=0.6.2
   Downloading docopt-0.6.2.tar.gz (25 kB)
+Requirement already satisfied: numpy&lt;2,&gt;=1 in /opt/conda/envs/Python-3.8-main/lib/python3.8/site-packages (from nbinteract) (1.19.2)
+Requirement already satisfied: IPython&lt;8,&gt;=6 in /opt/conda/envs/Python-3.8-main/lib/python3.8/site-packages (from nbinteract) (7.22.0)
+Requirement already satisfied: nbconvert&gt;=5.3 in /opt/conda/envs/Python-3.8-main/lib/python3.8/site-packages (from nbinteract) (6.0.7)
+Collecting traitlets&lt;5,&gt;=4.3
+  Downloading traitlets-4.3.3-py2.py3-none-any.whl (75 kB)
+     |████████████████████████████████| 75 kB 11.1 MB/s eta 0:00:01
+Requirement already satisfied: ipywidgets&lt;8,&gt;=7.5.0 in /opt/conda/envs/Python-3.8-main/lib/python3.8/site-packages (from nbinteract) (7.6.3)
+Collecting bqplot==0.11.0
+  Downloading bqplot-0.11.0-py2.py3-none-any.whl (1.5 MB)
+     |████████████████████████████████| 1.5 MB 60.4 MB/s eta 0:00:01
+Requirement already satisfied: toolz&lt;1,&gt;=0.8 in /opt/conda/envs/Python-3.8-main/lib/python3.8/site-packages (from nbinteract) (0.11.1)
+Collecting Jinja2&lt;3,&gt;=2.10
+  Downloading Jinja2-2.11.3-py2.py3-none-any.whl (125 kB)
+     |████████████████████████████████| 125 kB 65.6 MB/s eta 0:00:01
+Collecting nbformat&lt;5,&gt;=4.4.0
+  Downloading nbformat-4.4.0-py2.py3-none-any.whl (155 kB)
+     |████████████████████████████████| 155 kB 65.5 MB/s eta 0:00:01
 Requirement already satisfied: pandas in /opt/conda/envs/Python-3.8-main/lib/python3.8/site-packages (from bqplot==0.11.0-&gt;nbinteract) (1.2.4)
 Collecting traittypes&gt;=0.0.6
   Downloading traittypes-0.2.1-py2.py3-none-any.whl (8.6 kB)
-Requirement already satisfied: prompt-toolkit!=3.0.0,!=3.0.1,&lt;3.1.0,&gt;=2.0.0 in /opt/conda/envs/Python-3.8-main/lib/python3.8/site-packages (from IPython&lt;8,&gt;=6-&gt;nbinteract) (3.0.17)
-Requirement already satisfied: pygments in /opt/conda/envs/Python-3.8-main/lib/python3.8/site-packages (from IPython&lt;8,&gt;=6-&gt;nbinteract) (2.9.0)
-Requirement already satisfied: backcall in /opt/conda/envs/Python-3.8-main/lib/python3.8/site-packages (from IPython&lt;8,&gt;=6-&gt;nbinteract) (0.2.0)
-Requirement already satisfied: pexpect&gt;4.3 in /opt/conda/envs/Python-3.8-main/lib/python3.8/site-packages (from IPython&lt;8,&gt;=6-&gt;nbinteract) (4.8.0)
-Requirement already satisfied: decorator in /opt/conda/envs/Python-3.8-main/lib/python3.8/site-packages (from IPython&lt;8,&gt;=6-&gt;nbinteract) (5.0.9)
-Requirement already satisfied: pickleshare in /opt/conda/envs/Python-3.8-main/lib/python3.8/site-packages (from IPython&lt;8,&gt;=6-&gt;nbinteract) (0.7.5)
 Requirement already satisfied: jedi&gt;=0.16 in /opt/conda/envs/Python-3.8-main/lib/python3.8/site-packages (from IPython&lt;8,&gt;=6-&gt;nbinteract) (0.17.2)
+Requirement already satisfied: pickleshare in /opt/conda/envs/Python-3.8-main/lib/python3.8/site-packages (from IPython&lt;8,&gt;=6-&gt;nbinteract) (0.7.5)
+Requirement already satisfied: decorator in /opt/conda/envs/Python-3.8-main/lib/python3.8/site-packages (from IPython&lt;8,&gt;=6-&gt;nbinteract) (5.0.9)
 Requirement already satisfied: setuptools&gt;=18.5 in /opt/conda/envs/Python-3.8-main/lib/python3.8/site-packages (from IPython&lt;8,&gt;=6-&gt;nbinteract) (52.0.0.post20210125)
-Requirement already satisfied: jupyterlab-widgets&gt;=1.0.0 in /opt/conda/envs/Python-3.8-main/lib/python3.8/site-packages (from ipywidgets&lt;8,&gt;=7.5.0-&gt;nbinteract) (1.0.0)
+Requirement already satisfied: prompt-toolkit!=3.0.0,!=3.0.1,&lt;3.1.0,&gt;=2.0.0 in /opt/conda/envs/Python-3.8-main/lib/python3.8/site-packages (from IPython&lt;8,&gt;=6-&gt;nbinteract) (3.0.17)
+Requirement already satisfied: pexpect&gt;4.3 in /opt/conda/envs/Python-3.8-main/lib/python3.8/site-packages (from IPython&lt;8,&gt;=6-&gt;nbinteract) (4.8.0)
+Requirement already satisfied: backcall in /opt/conda/envs/Python-3.8-main/lib/python3.8/site-packages (from IPython&lt;8,&gt;=6-&gt;nbinteract) (0.2.0)
+Requirement already satisfied: pygments in /opt/conda/envs/Python-3.8-main/lib/python3.8/site-packages (from IPython&lt;8,&gt;=6-&gt;nbinteract) (2.9.0)
 Requirement already satisfied: ipykernel&gt;=4.5.1 in /opt/conda/envs/Python-3.8-main/lib/python3.8/site-packages (from ipywidgets&lt;8,&gt;=7.5.0-&gt;nbinteract) (5.3.4)
+Requirement already satisfied: jupyterlab-widgets&gt;=1.0.0 in /opt/conda/envs/Python-3.8-main/lib/python3.8/site-packages (from ipywidgets&lt;8,&gt;=7.5.0-&gt;nbinteract) (1.0.0)
 Requirement already satisfied: widgetsnbextension~=3.5.0 in /opt/conda/envs/Python-3.8-main/lib/python3.8/site-packages (from ipywidgets&lt;8,&gt;=7.5.0-&gt;nbinteract) (3.5.1)
-Requirement already satisfied: tornado&gt;=4.2 in /opt/conda/envs/Python-3.8-main/lib/python3.8/site-packages (from ipykernel&gt;=4.5.1-&gt;ipywidgets&lt;8,&gt;=7.5.0-&gt;nbinteract) (6.1)
 Requirement already satisfied: jupyter-client in /opt/conda/envs/Python-3.8-main/lib/python3.8/site-packages (from ipykernel&gt;=4.5.1-&gt;ipywidgets&lt;8,&gt;=7.5.0-&gt;nbinteract) (6.1.12)
+Requirement already satisfied: tornado&gt;=4.2 in /opt/conda/envs/Python-3.8-main/lib/python3.8/site-packages (from ipykernel&gt;=4.5.1-&gt;ipywidgets&lt;8,&gt;=7.5.0-&gt;nbinteract) (6.1)
 Requirement already satisfied: parso&lt;0.8.0,&gt;=0.7.0 in /opt/conda/envs/Python-3.8-main/lib/python3.8/site-packages (from jedi&gt;=0.16-&gt;IPython&lt;8,&gt;=6-&gt;nbinteract) (0.7.0)
 Requirement already satisfied: MarkupSafe&gt;=0.23 in /opt/conda/envs/Python-3.8-main/lib/python3.8/site-packages (from Jinja2&lt;3,&gt;=2.10-&gt;nbinteract) (2.0.1)
-Requirement already satisfied: jupyter-core in /opt/conda/envs/Python-3.8-main/lib/python3.8/site-packages (from nbconvert&gt;=5.3-&gt;nbinteract) (4.7.1)
 Requirement already satisfied: entrypoints&gt;=0.2.2 in /opt/conda/envs/Python-3.8-main/lib/python3.8/site-packages (from nbconvert&gt;=5.3-&gt;nbinteract) (0.3)
+Requirement already satisfied: testpath in /opt/conda/envs/Python-3.8-main/lib/python3.8/site-packages (from nbconvert&gt;=5.3-&gt;nbinteract) (0.4.4)
 Requirement already satisfied: bleach in /opt/conda/envs/Python-3.8-main/lib/python3.8/site-packages (from nbconvert&gt;=5.3-&gt;nbinteract) (3.3.0)
+Requirement already satisfied: mistune&lt;2,&gt;=0.8.1 in /opt/conda/envs/Python-3.8-main/lib/python3.8/site-packages (from nbconvert&gt;=5.3-&gt;nbinteract) (0.8.4)
+Requirement already satisfied: pandocfilters&gt;=1.4.1 in /opt/conda/envs/Python-3.8-main/lib/python3.8/site-packages (from nbconvert&gt;=5.3-&gt;nbinteract) (1.4.3)
+Requirement already satisfied: jupyter-core in /opt/conda/envs/Python-3.8-main/lib/python3.8/site-packages (from nbconvert&gt;=5.3-&gt;nbinteract) (4.7.1)
 Requirement already satisfied: jupyterlab-pygments in /opt/conda/envs/Python-3.8-main/lib/python3.8/site-packages (from nbconvert&gt;=5.3-&gt;nbinteract) (0.1.2)
 Requirement already satisfied: defusedxml in /opt/conda/envs/Python-3.8-main/lib/python3.8/site-packages (from nbconvert&gt;=5.3-&gt;nbinteract) (0.7.1)
-Requirement already satisfied: pandocfilters&gt;=1.4.1 in /opt/conda/envs/Python-3.8-main/lib/python3.8/site-packages (from nbconvert&gt;=5.3-&gt;nbinteract) (1.4.3)
-Requirement already satisfied: mistune&lt;2,&gt;=0.8.1 in /opt/conda/envs/Python-3.8-main/lib/python3.8/site-packages (from nbconvert&gt;=5.3-&gt;nbinteract) (0.8.4)
 Requirement already satisfied: nbclient&lt;0.6.0,&gt;=0.5.0 in /opt/conda/envs/Python-3.8-main/lib/python3.8/site-packages (from nbconvert&gt;=5.3-&gt;nbinteract) (0.5.3)
-Requirement already satisfied: testpath in /opt/conda/envs/Python-3.8-main/lib/python3.8/site-packages (from nbconvert&gt;=5.3-&gt;nbinteract) (0.4.4)
-Requirement already satisfied: nest-asyncio in /opt/conda/envs/Python-3.8-main/lib/python3.8/site-packages (from nbclient&lt;0.6.0,&gt;=0.5.0-&gt;nbconvert&gt;=5.3-&gt;nbinteract) (1.5.1)
-Requirement already satisfied: async-generator in /opt/conda/envs/Python-3.8-main/lib/python3.8/site-packages (from nbclient&lt;0.6.0,&gt;=0.5.0-&gt;nbconvert&gt;=5.3-&gt;nbinteract) (1.10)
 Collecting nbclient&lt;0.6.0,&gt;=0.5.0
   Downloading nbclient-0.5.4-py3-none-any.whl (66 kB)
-     |████████████████████████████████| 66 kB 8.1 MB/s  eta 0:00:01
+     |████████████████████████████████| 66 kB 11.6 MB/s eta 0:00:01
+Requirement already satisfied: nest-asyncio in /opt/conda/envs/Python-3.8-main/lib/python3.8/site-packages (from nbclient&lt;0.6.0,&gt;=0.5.0-&gt;nbconvert&gt;=5.3-&gt;nbinteract) (1.5.1)
   Downloading nbclient-0.5.2-py3-none-any.whl (65 kB)
-     |████████████████████████████████| 65 kB 7.6 MB/s  eta 0:00:01
+     |████████████████████████████████| 65 kB 9.7 MB/s  eta 0:00:01
   Downloading nbclient-0.5.1-py3-none-any.whl (65 kB)
-     |████████████████████████████████| 65 kB 7.6 MB/s  eta 0:00:01
+     |████████████████████████████████| 65 kB 10.8 MB/s eta 0:00:01
   Downloading nbclient-0.5.0-py3-none-any.whl (65 kB)
-     |████████████████████████████████| 65 kB 7.3 MB/s  eta 0:00:01
+     |████████████████████████████████| 65 kB 11.1 MB/s eta 0:00:01
 INFO: pip is looking at multiple versions of mistune to determine which version is compatible with other requirements. This could take a while.
 Collecting mistune&lt;2,&gt;=0.8.1
   Downloading mistune-0.8.4-py2.py3-none-any.whl (16 kB)
@@ -13250,43 +13228,43 @@ INFO: This is taking longer than usual. You might need to provide the dependency
 INFO: pip is looking at multiple versions of nbconvert to determine which version is compatible with other requirements. This could take a while.
 Collecting nbconvert&gt;=5.3
   Downloading nbconvert-6.2.0-py3-none-any.whl (553 kB)
-     |████████████████████████████████| 553 kB 45.4 MB/s eta 0:00:01
+     |████████████████████████████████| 553 kB 53.0 MB/s eta 0:00:01
   Downloading nbconvert-6.1.0-py3-none-any.whl (551 kB)
-     |████████████████████████████████| 551 kB 39.5 MB/s eta 0:00:01
+     |████████████████████████████████| 551 kB 55.0 MB/s eta 0:00:01
   Downloading nbconvert-6.0.7-py3-none-any.whl (552 kB)
-     |████████████████████████████████| 552 kB 44.2 MB/s eta 0:00:01
+     |████████████████████████████████| 552 kB 58.0 MB/s eta 0:00:01
 INFO: pip is looking at multiple versions of entrypoints to determine which version is compatible with other requirements. This could take a while.
   Downloading nbconvert-6.0.6-py3-none-any.whl (551 kB)
-     |████████████████████████████████| 551 kB 40.1 MB/s eta 0:00:01
+     |████████████████████████████████| 551 kB 54.5 MB/s eta 0:00:01
   Downloading nbconvert-6.0.5-py3-none-any.whl (505 kB)
-     |████████████████████████████████| 505 kB 40.6 MB/s eta 0:00:01
+     |████████████████████████████████| 505 kB 51.3 MB/s eta 0:00:01
 INFO: This is taking longer than usual. You might need to provide the dependency resolver with stricter constraints to reduce runtime. If you want to abort this run, you can press Ctrl + C to do so. To improve how pip performs, tell us what happened here: https://pip.pypa.io/surveys/backtracking
   Downloading nbconvert-6.0.4-py3-none-any.whl (505 kB)
-     |████████████████████████████████| 505 kB 39.9 MB/s eta 0:00:01
+     |████████████████████████████████| 505 kB 56.0 MB/s eta 0:00:01
   Downloading nbconvert-6.0.3-py3-none-any.whl (505 kB)
-     |████████████████████████████████| 505 kB 45.3 MB/s eta 0:00:01
+     |████████████████████████████████| 505 kB 55.2 MB/s eta 0:00:01
   Downloading nbconvert-6.0.2-py3-none-any.whl (504 kB)
-     |████████████████████████████████| 504 kB 42.1 MB/s eta 0:00:01
+     |████████████████████████████████| 504 kB 56.4 MB/s eta 0:00:01
   Downloading nbconvert-6.0.1-py3-none-any.whl (502 kB)
-     |████████████████████████████████| 502 kB 47.4 MB/s eta 0:00:01
+     |████████████████████████████████| 502 kB 54.6 MB/s eta 0:00:01
 INFO: pip is looking at multiple versions of nbconvert to determine which version is compatible with other requirements. This could take a while.
   Downloading nbconvert-6.0.0-py3-none-any.whl (502 kB)
-     |████████████████████████████████| 502 kB 42.3 MB/s eta 0:00:01
+     |████████████████████████████████| 502 kB 51.0 MB/s eta 0:00:01
   Downloading nbconvert-5.6.1-py2.py3-none-any.whl (455 kB)
-     |████████████████████████████████| 455 kB 32.3 MB/s eta 0:00:01
-Requirement already satisfied: jsonschema!=2.5.0,&gt;=2.4 in /opt/conda/envs/Python-3.8-main/lib/python3.8/site-packages (from nbformat&lt;5,&gt;=4.4.0-&gt;nbinteract) (3.2.0)
+     |████████████████████████████████| 455 kB 54.8 MB/s eta 0:00:01
 Requirement already satisfied: ipython-genutils in /opt/conda/envs/Python-3.8-main/lib/python3.8/site-packages (from nbformat&lt;5,&gt;=4.4.0-&gt;nbinteract) (0.2.0)
-Requirement already satisfied: six&gt;=1.11.0 in /opt/conda/envs/Python-3.8-main/lib/python3.8/site-packages (from jsonschema!=2.5.0,&gt;=2.4-&gt;nbformat&lt;5,&gt;=4.4.0-&gt;nbinteract) (1.15.0)
+Requirement already satisfied: jsonschema!=2.5.0,&gt;=2.4 in /opt/conda/envs/Python-3.8-main/lib/python3.8/site-packages (from nbformat&lt;5,&gt;=4.4.0-&gt;nbinteract) (3.2.0)
 Requirement already satisfied: pyrsistent&gt;=0.14.0 in /opt/conda/envs/Python-3.8-main/lib/python3.8/site-packages (from jsonschema!=2.5.0,&gt;=2.4-&gt;nbformat&lt;5,&gt;=4.4.0-&gt;nbinteract) (0.17.3)
+Requirement already satisfied: six&gt;=1.11.0 in /opt/conda/envs/Python-3.8-main/lib/python3.8/site-packages (from jsonschema!=2.5.0,&gt;=2.4-&gt;nbformat&lt;5,&gt;=4.4.0-&gt;nbinteract) (1.15.0)
 Requirement already satisfied: attrs&gt;=17.4.0 in /opt/conda/envs/Python-3.8-main/lib/python3.8/site-packages (from jsonschema!=2.5.0,&gt;=2.4-&gt;nbformat&lt;5,&gt;=4.4.0-&gt;nbinteract) (21.2.0)
 Requirement already satisfied: ptyprocess&gt;=0.5 in /opt/conda/envs/Python-3.8-main/lib/python3.8/site-packages (from pexpect&gt;4.3-&gt;IPython&lt;8,&gt;=6-&gt;nbinteract) (0.7.0)
 Requirement already satisfied: wcwidth in /opt/conda/envs/Python-3.8-main/lib/python3.8/site-packages (from prompt-toolkit!=3.0.0,!=3.0.1,&lt;3.1.0,&gt;=2.0.0-&gt;IPython&lt;8,&gt;=6-&gt;nbinteract) (0.2.5)
 Requirement already satisfied: notebook&gt;=4.4.1 in /opt/conda/envs/Python-3.8-main/lib/python3.8/site-packages (from widgetsnbextension~=3.5.0-&gt;ipywidgets&lt;8,&gt;=7.5.0-&gt;nbinteract) (6.4.0)
+Requirement already satisfied: prometheus-client in /opt/conda/envs/Python-3.8-main/lib/python3.8/site-packages (from notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.5.0-&gt;ipywidgets&lt;8,&gt;=7.5.0-&gt;nbinteract) (0.11.0)
 Requirement already satisfied: terminado&gt;=0.8.3 in /opt/conda/envs/Python-3.8-main/lib/python3.8/site-packages (from notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.5.0-&gt;ipywidgets&lt;8,&gt;=7.5.0-&gt;nbinteract) (0.9.4)
 Requirement already satisfied: Send2Trash&gt;=1.5.0 in /opt/conda/envs/Python-3.8-main/lib/python3.8/site-packages (from notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.5.0-&gt;ipywidgets&lt;8,&gt;=7.5.0-&gt;nbinteract) (1.5.0)
-Requirement already satisfied: argon2-cffi in /opt/conda/envs/Python-3.8-main/lib/python3.8/site-packages (from notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.5.0-&gt;ipywidgets&lt;8,&gt;=7.5.0-&gt;nbinteract) (20.1.0)
-Requirement already satisfied: prometheus-client in /opt/conda/envs/Python-3.8-main/lib/python3.8/site-packages (from notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.5.0-&gt;ipywidgets&lt;8,&gt;=7.5.0-&gt;nbinteract) (0.11.0)
 Requirement already satisfied: pyzmq&gt;=17 in /opt/conda/envs/Python-3.8-main/lib/python3.8/site-packages (from notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.5.0-&gt;ipywidgets&lt;8,&gt;=7.5.0-&gt;nbinteract) (20.0.0)
+Requirement already satisfied: argon2-cffi in /opt/conda/envs/Python-3.8-main/lib/python3.8/site-packages (from notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.5.0-&gt;ipywidgets&lt;8,&gt;=7.5.0-&gt;nbinteract) (20.1.0)
 Requirement already satisfied: python-dateutil&gt;=2.1 in /opt/conda/envs/Python-3.8-main/lib/python3.8/site-packages (from jupyter-client-&gt;ipykernel&gt;=4.5.1-&gt;ipywidgets&lt;8,&gt;=7.5.0-&gt;nbinteract) (2.8.1)
 Requirement already satisfied: cffi&gt;=1.0.0 in /opt/conda/envs/Python-3.8-main/lib/python3.8/site-packages (from argon2-cffi-&gt;notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.5.0-&gt;ipywidgets&lt;8,&gt;=7.5.0-&gt;nbinteract) (1.14.5)
 Requirement already satisfied: pycparser in /opt/conda/envs/Python-3.8-main/lib/python3.8/site-packages (from cffi&gt;=1.0.0-&gt;argon2-cffi-&gt;notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.5.0-&gt;ipywidgets&lt;8,&gt;=7.5.0-&gt;nbinteract) (2.20)
@@ -13296,7 +13274,7 @@ Requirement already satisfied: pyparsing&gt;=2.0.2 in /opt/conda/envs/Python-3.8
 Requirement already satisfied: pytz&gt;=2017.3 in /opt/conda/envs/Python-3.8-main/lib/python3.8/site-packages (from pandas-&gt;bqplot==0.11.0-&gt;nbinteract) (2021.1)
 Building wheels for collected packages: docopt
   Building wheel for docopt (setup.py) ... done
-  Created wheel for docopt: filename=docopt-0.6.2-py2.py3-none-any.whl size=13704 sha256=9942e0e37617c72a83537a0a5260c5f83007ad42be3cb6c661adc31d4a031061
+  Created wheel for docopt: filename=docopt-0.6.2-py2.py3-none-any.whl size=13704 sha256=75d92db860efabf9b85818994a5aa4cbbce16c0a4e161d4b4628632b731f146b
   Stored in directory: /tmp/wsuser/.cache/pip/wheels/56/ea/58/ead137b087d9e326852a851351d1debf4ada529b6ac0ec4e8c
 Successfully built docopt
 Installing collected packages: traitlets, nbformat, Jinja2, nbconvert, traittypes, docopt, bqplot, nbinteract
@@ -13340,7 +13318,11 @@ Successfully installed Jinja2-2.11.3 bqplot-0.11.0 docopt-0.6.2 nbconvert-5.6.1 
 <div class="output_wrapper">
 <div class="output">
 
+
 <div class="output_area">
+
+    <div class="prompt"></div>
+
 
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>Requirement already satisfied: geopandas in /opt/conda/envs/Python-3.8-main/lib/python3.8/site-packages (0.9.0)
@@ -13378,7 +13360,11 @@ Requirement already satisfied: numpy&gt;=1.16.5 in /opt/conda/envs/Python-3.8-ma
 <div class="output_wrapper">
 <div class="output">
 
+
 <div class="output_area">
+
+    <div class="prompt output_prompt">Out[29]:</div>
+
 
 
 <div class="output_html rendered_html output_subarea output_execute_result">
@@ -14171,7 +14157,8 @@ Requirement already satisfied: numpy&gt;=1.16.5 in /opt/conda/envs/Python-3.8-ma
 <div class="cell border-box-sizing code_cell rendered">
 
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>Let's attempt to generate cholopleth map of Florida showing the boundaries between each of the major cities.</p>
 
@@ -14183,7 +14170,11 @@ Requirement already satisfied: numpy&gt;=1.16.5 in /opt/conda/envs/Python-3.8-ma
 <div class="output_wrapper">
 <div class="output">
 
+
 <div class="output_area">
+
+    <div class="prompt output_prompt">Out[34]:</div>
+
 
 
 <div class="output_html rendered_html output_subarea output_execute_result">
@@ -14204,7 +14195,11 @@ Requirement already satisfied: numpy&gt;=1.16.5 in /opt/conda/envs/Python-3.8-ma
 <div class="output_wrapper">
 <div class="output">
 
+
 <div class="output_area">
+
+    <div class="prompt output_prompt">Out[36]:</div>
+
 
 
 
@@ -14293,7 +14288,11 @@ Name: NAME, dtype: object</pre>
 <div class="output_wrapper">
 <div class="output">
 
+
 <div class="output_area">
+
+    <div class="prompt output_prompt">Out[38]:</div>
+
 
 
 <div class="output_html rendered_html output_subarea output_execute_result">
@@ -14802,7 +14801,8 @@ Name: NAME, dtype: object</pre>
 </div>
 
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>We will now use API calls from NSRDB (National Solar Radiation Database ) to obtain data for our Machine Learning Model <a href="https://nsrdb.nrel.gov/data-sets/api-instructions.html">https://nsrdb.nrel.gov/data-sets/api-instructions.html</a></p>
 
@@ -14826,7 +14826,11 @@ Name: NAME, dtype: object</pre>
 <div class="output_wrapper">
 <div class="output">
 
+
 <div class="output_area">
+
+    <div class="prompt output_prompt">Out[69]:</div>
+
 
 
 <div class="output_html rendered_html output_subarea output_execute_result">
@@ -19813,7 +19817,11 @@ Name: NAME, dtype: object</pre>
 <div class="output_wrapper">
 <div class="output">
 
+
 <div class="output_area">
+
+    <div class="prompt output_prompt">Out[70]:</div>
+
 
 
 <div class="output_html rendered_html output_subarea output_execute_result">
@@ -20145,7 +20153,11 @@ Name: NAME, dtype: object</pre>
 <div class="output_wrapper">
 <div class="output">
 
+
 <div class="output_area">
+
+    <div class="prompt output_prompt">Out[71]:</div>
+
 
 
 
@@ -20167,7 +20179,11 @@ Name: NAME, dtype: object</pre>
 <div class="output_wrapper">
 <div class="output">
 
+
 <div class="output_area">
+
+    <div class="prompt output_prompt">Out[73]:</div>
+
 
 
 
@@ -20203,7 +20219,11 @@ Name: Latitude, dtype: object</pre>
 <div class="output_wrapper">
 <div class="output">
 
+
 <div class="output_area">
+
+    <div class="prompt output_prompt">Out[78]:</div>
+
 
 
 <div class="output_html rendered_html output_subarea output_execute_result">
@@ -20251,7 +20271,11 @@ Name: Latitude, dtype: object</pre>
 <div class="output_wrapper">
 <div class="output">
 
+
 <div class="output_area">
+
+    <div class="prompt output_prompt">Out[79]:</div>
+
 
 
 
@@ -20285,7 +20309,11 @@ Name: Latitude, dtype: object</pre>
 <div class="output_wrapper">
 <div class="output">
 
+
 <div class="output_area">
+
+    <div class="prompt output_prompt">Out[81]:</div>
+
 
 
 <div class="output_html rendered_html output_subarea output_execute_result">
@@ -20377,7 +20405,11 @@ Name: Latitude, dtype: object</pre>
 <div class="output_wrapper">
 <div class="output">
 
+
 <div class="output_area">
+
+    <div class="prompt output_prompt">Out[82]:</div>
+
 
 
 <div class="output_html rendered_html output_subarea output_execute_result">
@@ -20469,7 +20501,11 @@ Name: Latitude, dtype: object</pre>
 <div class="output_wrapper">
 <div class="output">
 
+
 <div class="output_area">
+
+    <div class="prompt output_prompt">Out[83]:</div>
+
 
 
 <div class="output_html rendered_html output_subarea output_execute_result">
@@ -20565,14 +20601,16 @@ Name: Latitude, dtype: object</pre>
 </div>
 
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>Strong Correlation Between GHI, DHI and DNI. A degree of correlation also observed between GHI, Wind Speed and Temperature.</p>
 
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>Let's attempt to obtain data for all the major cities within the state of Florida.</p>
 
@@ -20596,7 +20634,11 @@ Name: Latitude, dtype: object</pre>
 <div class="output_wrapper">
 <div class="output">
 
+
 <div class="output_area">
+
+    <div class="prompt"></div>
+
 
 <div class="output_subarea output_stream output_stderr output_text">
 <pre>/opt/conda/envs/Python-3.8-main/lib/python3.8/site-packages/pandas/core/frame.py:4308: SettingWithCopyWarning: 
@@ -20620,7 +20662,11 @@ See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stab
 <div class="output_wrapper">
 <div class="output">
 
+
 <div class="output_area">
+
+    <div class="prompt output_prompt">Out[90]:</div>
+
 
 
 <div class="output_html rendered_html output_subarea output_execute_result">
@@ -21474,7 +21520,11 @@ See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stab
 <div class="output_wrapper">
 <div class="output">
 
+
 <div class="output_area">
+
+    <div class="prompt output_prompt">Out[91]:</div>
+
 
 
 
@@ -21493,7 +21543,11 @@ See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stab
 <div class="output_wrapper">
 <div class="output">
 
+
 <div class="output_area">
+
+    <div class="prompt"></div>
+
 
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>Requirement already satisfied: yellowbrick in /opt/conda/envs/Python-3.8-main/lib/python3.8/site-packages (1.3.post1)
@@ -21523,7 +21577,8 @@ Requirement already satisfied: joblib&gt;=0.11 in /opt/conda/envs/Python-3.8-mai
 <div class="cell border-box-sizing code_cell rendered">
 
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>Here, we determine the best K for our K means classifier using the KElbowVisualizer library.</p>
 
@@ -21535,7 +21590,11 @@ Requirement already satisfied: joblib&gt;=0.11 in /opt/conda/envs/Python-3.8-mai
 <div class="output_wrapper">
 <div class="output">
 
+
 <div class="output_area">
+
+    <div class="prompt"></div>
+
 
 <div class="output_subarea output_stream output_stderr output_text">
 <pre>findfont: Font family [&#39;sans-serif&#39;] not found. Falling back to DejaVu Sans.
@@ -21546,6 +21605,9 @@ findfont: Font family [&#39;sans-serif&#39;] not found. Falling back to DejaVu S
 </div>
 
 <div class="output_area">
+
+    <div class="prompt"></div>
+
 
 
 
@@ -21558,6 +21620,9 @@ findfont: Font family [&#39;sans-serif&#39;] not found. Falling back to DejaVu S
 </div>
 
 <div class="output_area">
+
+    <div class="prompt output_prompt">Out[95]:</div>
+
 
 
 
@@ -21576,7 +21641,11 @@ findfont: Font family [&#39;sans-serif&#39;] not found. Falling back to DejaVu S
 <div class="output_wrapper">
 <div class="output">
 
+
 <div class="output_area">
+
+    <div class="prompt output_prompt">Out[96]:</div>
+
 
 
 
@@ -21595,7 +21664,11 @@ findfont: Font family [&#39;sans-serif&#39;] not found. Falling back to DejaVu S
 <div class="output_wrapper">
 <div class="output">
 
+
 <div class="output_area">
+
+    <div class="prompt output_prompt">Out[97]:</div>
+
 
 
 
@@ -21614,7 +21687,11 @@ findfont: Font family [&#39;sans-serif&#39;] not found. Falling back to DejaVu S
 <div class="output_wrapper">
 <div class="output">
 
+
 <div class="output_area">
+
+    <div class="prompt output_prompt">Out[98]:</div>
+
 
 
 <div class="output_html rendered_html output_subarea output_execute_result">
@@ -21730,7 +21807,11 @@ findfont: Font family [&#39;sans-serif&#39;] not found. Falling back to DejaVu S
 <div class="output_wrapper">
 <div class="output">
 
+
 <div class="output_area">
+
+    <div class="prompt output_prompt">Out[99]:</div>
+
 
 
 <div class="output_html rendered_html output_subarea output_execute_result">
@@ -21748,7 +21829,11 @@ findfont: Font family [&#39;sans-serif&#39;] not found. Falling back to DejaVu S
 <div class="output_wrapper">
 <div class="output">
 
+
 <div class="output_area">
+
+    <div class="prompt output_prompt">Out[100]:</div>
+
 
 
 <div class="output_html rendered_html output_subarea output_execute_result">
@@ -22241,7 +22326,11 @@ findfont: Font family [&#39;sans-serif&#39;] not found. Falling back to DejaVu S
 <div class="output_wrapper">
 <div class="output">
 
+
 <div class="output_area">
+
+    <div class="prompt output_prompt">Out[101]:</div>
+
 
 
 <div class="output_html rendered_html output_subarea output_execute_result">
@@ -22513,7 +22602,11 @@ findfont: Font family [&#39;sans-serif&#39;] not found. Falling back to DejaVu S
 <div class="output_wrapper">
 <div class="output">
 
+
 <div class="output_area">
+
+    <div class="prompt output_prompt">Out[102]:</div>
+
 
 
 <div class="output_html rendered_html output_subarea output_execute_result">
@@ -22767,14 +22860,16 @@ findfont: Font family [&#39;sans-serif&#39;] not found. Falling back to DejaVu S
 </div>
 
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>Next, we obtain data to address the question of optimizing energy production and reduce areas of inefficient Energy Usage</p>
 
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>Data downloaded from the Florida Municipal Electric Association's website <a href="https://assets.noviams.com/novi-file-uploads/fmea/Stats/2019_florida_publicpower_utility_statistical_information.xls">https://assets.noviams.com/novi-file-uploads/fmea/Stats/2019_florida_publicpower_utility_statistical_information.xls</a></p>
 
@@ -22786,7 +22881,11 @@ findfont: Font family [&#39;sans-serif&#39;] not found. Falling back to DejaVu S
 <div class="output_wrapper">
 <div class="output">
 
+
 <div class="output_area">
+
+    <div class="prompt output_prompt">Out[103]:</div>
+
 
 
 <div class="output_html rendered_html output_subarea output_execute_result">
@@ -22941,7 +23040,11 @@ findfont: Font family [&#39;sans-serif&#39;] not found. Falling back to DejaVu S
 <div class="output_wrapper">
 <div class="output">
 
+
 <div class="output_area">
+
+    <div class="prompt output_prompt">Out[89]:</div>
+
 
 
 
@@ -22971,7 +23074,11 @@ findfont: Font family [&#39;sans-serif&#39;] not found. Falling back to DejaVu S
 <div class="output_wrapper">
 <div class="output">
 
+
 <div class="output_area">
+
+    <div class="prompt output_prompt">Out[197]:</div>
+
 
 
 <div class="output_html rendered_html output_subarea output_execute_result">
@@ -36660,7 +36767,11 @@ findfont: Font family [&#39;sans-serif&#39;] not found. Falling back to DejaVu S
 <div class="output_wrapper">
 <div class="output">
 
+
 <div class="output_area">
+
+    <div class="prompt output_prompt">Out[198]:</div>
+
 
 
 <div class="output_html rendered_html output_subarea output_execute_result">
@@ -36773,7 +36884,8 @@ findfont: Font family [&#39;sans-serif&#39;] not found. Falling back to DejaVu S
 </div>
 
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>Positive Correlation Exists Between Total kWh Sales, Peak Power Generation and Municipal Population. Weak correlation between kWh Sales and Energy
 per Capita. However, all these Data Points will be used for Machine Learning Algorithm.</p>
@@ -36792,7 +36904,11 @@ per Capita. However, all these Data Points will be used for Machine Learning Alg
 <div class="output_wrapper">
 <div class="output">
 
+
 <div class="output_area">
+
+    <div class="prompt output_prompt">Out[229]:</div>
+
 
 
 <div class="output_html rendered_html output_subarea output_execute_result">
@@ -37052,7 +37168,8 @@ per Capita. However, all these Data Points will be used for Machine Learning Alg
 <div class="cell border-box-sizing code_cell rendered">
 
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>Lets try to use the K-Means algorithm to obtain insight into the data set</p>
 
@@ -37064,7 +37181,11 @@ per Capita. However, all these Data Points will be used for Machine Learning Alg
 <div class="output_wrapper">
 <div class="output">
 
+
 <div class="output_area">
+
+    <div class="prompt"></div>
+
 
 
 
@@ -37077,6 +37198,9 @@ per Capita. However, all these Data Points will be used for Machine Learning Alg
 </div>
 
 <div class="output_area">
+
+    <div class="prompt output_prompt">Out[231]:</div>
+
 
 
 
@@ -37095,7 +37219,11 @@ per Capita. However, all these Data Points will be used for Machine Learning Alg
 <div class="output_wrapper">
 <div class="output">
 
+
 <div class="output_area">
+
+    <div class="prompt output_prompt">Out[232]:</div>
+
 
 
 
@@ -37114,7 +37242,11 @@ per Capita. However, all these Data Points will be used for Machine Learning Alg
 <div class="output_wrapper">
 <div class="output">
 
+
 <div class="output_area">
+
+    <div class="prompt output_prompt">Out[233]:</div>
+
 
 
 <div class="output_html rendered_html output_subarea output_execute_result">
@@ -37224,7 +37356,11 @@ per Capita. However, all these Data Points will be used for Machine Learning Alg
 <div class="output_wrapper">
 <div class="output">
 
+
 <div class="output_area">
+
+    <div class="prompt output_prompt">Out[234]:</div>
+
 
 
 <div class="output_html rendered_html output_subarea output_execute_result">
@@ -37646,7 +37782,11 @@ per Capita. However, all these Data Points will be used for Machine Learning Alg
 <div class="output_wrapper">
 <div class="output">
 
+
 <div class="output_area">
+
+    <div class="prompt output_prompt">Out[235]:</div>
+
 
 
 <div class="output_html rendered_html output_subarea output_execute_result">
@@ -37664,7 +37804,11 @@ per Capita. However, all these Data Points will be used for Machine Learning Alg
 <div class="output_wrapper">
 <div class="output">
 
+
 <div class="output_area">
+
+    <div class="prompt output_prompt">Out[236]:</div>
+
 
 
 <div class="output_html rendered_html output_subarea output_execute_result">
@@ -38062,7 +38206,11 @@ per Capita. However, all these Data Points will be used for Machine Learning Alg
 <div class="output_wrapper">
 <div class="output">
 
+
 <div class="output_area">
+
+    <div class="prompt output_prompt">Out[237]:</div>
+
 
 
 <div class="output_html rendered_html output_subarea output_execute_result">
@@ -38131,14 +38279,16 @@ per Capita. However, all these Data Points will be used for Machine Learning Alg
 </div>
 
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>From the data clusters generated, the K-Means algorithm did not provide reasonable insight into the data</p>
 
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>Next, we will use the K-Means algorithm to target areas of in-efficient energy production</p>
 
@@ -38156,7 +38306,11 @@ per Capita. However, all these Data Points will be used for Machine Learning Alg
 <div class="output_wrapper">
 <div class="output">
 
+
 <div class="output_area">
+
+    <div class="prompt output_prompt">Out[240]:</div>
+
 
 
 <div class="output_html rendered_html output_subarea output_execute_result">
@@ -38354,7 +38508,11 @@ per Capita. However, all these Data Points will be used for Machine Learning Alg
 <div class="output_wrapper">
 <div class="output">
 
+
 <div class="output_area">
+
+    <div class="prompt output_prompt">Out[241]:</div>
+
 
 
 <div class="output_html rendered_html output_subarea output_execute_result">
@@ -38407,7 +38565,11 @@ per Capita. However, all these Data Points will be used for Machine Learning Alg
 <div class="output_wrapper">
 <div class="output">
 
+
 <div class="output_area">
+
+    <div class="prompt"></div>
+
 
 
 
@@ -38420,6 +38582,9 @@ per Capita. However, all these Data Points will be used for Machine Learning Alg
 </div>
 
 <div class="output_area">
+
+    <div class="prompt output_prompt">Out[242]:</div>
+
 
 
 
@@ -38438,7 +38603,11 @@ per Capita. However, all these Data Points will be used for Machine Learning Alg
 <div class="output_wrapper">
 <div class="output">
 
+
 <div class="output_area">
+
+    <div class="prompt output_prompt">Out[243]:</div>
+
 
 
 
@@ -38457,7 +38626,11 @@ per Capita. However, all these Data Points will be used for Machine Learning Alg
 <div class="output_wrapper">
 <div class="output">
 
+
 <div class="output_area">
+
+    <div class="prompt output_prompt">Out[244]:</div>
+
 
 
 <div class="output_html rendered_html output_subarea output_execute_result">
@@ -38567,7 +38740,11 @@ per Capita. However, all these Data Points will be used for Machine Learning Alg
 <div class="output_wrapper">
 <div class="output">
 
+
 <div class="output_area">
+
+    <div class="prompt output_prompt">Out[275]:</div>
+
 
 
 <div class="output_html rendered_html output_subarea output_execute_result">
@@ -38585,7 +38762,11 @@ per Capita. However, all these Data Points will be used for Machine Learning Alg
 <div class="output_wrapper">
 <div class="output">
 
+
 <div class="output_area">
+
+    <div class="prompt output_prompt">Out[246]:</div>
+
 
 
 <div class="output_html rendered_html output_subarea output_execute_result">
@@ -38995,7 +39176,11 @@ per Capita. However, all these Data Points will be used for Machine Learning Alg
 <div class="output_wrapper">
 <div class="output">
 
+
 <div class="output_area">
+
+    <div class="prompt output_prompt">Out[247]:</div>
+
 
 
 <div class="output_html rendered_html output_subarea output_execute_result">
@@ -39052,14 +39237,16 @@ per Capita. However, all these Data Points will be used for Machine Learning Alg
 </div>
 
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>No real insight gleaned from K-means algorithm on Energy per Capita data</p>
 
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>Let us run a DBSCAN Machine learning algorithm to see if any real cluster information is generated between the data points</p>
 
@@ -39077,7 +39264,11 @@ per Capita. However, all these Data Points will be used for Machine Learning Alg
 <div class="output_wrapper">
 <div class="output">
 
+
 <div class="output_area">
+
+    <div class="prompt output_prompt">Out[254]:</div>
+
 
 
 <div class="output_html rendered_html output_subarea output_execute_result">
@@ -39163,7 +39354,11 @@ per Capita. However, all these Data Points will be used for Machine Learning Alg
 <div class="output_wrapper">
 <div class="output">
 
+
 <div class="output_area">
+
+    <div class="prompt output_prompt">Out[257]:</div>
+
 
 
 
@@ -39183,7 +39378,11 @@ per Capita. However, all these Data Points will be used for Machine Learning Alg
 <div class="output_wrapper">
 <div class="output">
 
+
 <div class="output_area">
+
+    <div class="prompt output_prompt">Out[258]:</div>
+
 
 
 
@@ -39209,7 +39408,11 @@ per Capita. However, all these Data Points will be used for Machine Learning Alg
 <div class="output_wrapper">
 <div class="output">
 
+
 <div class="output_area">
+
+    <div class="prompt output_prompt">Out[264]:</div>
+
 
 
 <div class="output_html rendered_html output_subarea output_execute_result">
@@ -39631,7 +39834,11 @@ per Capita. However, all these Data Points will be used for Machine Learning Alg
 <div class="output_wrapper">
 <div class="output">
 
+
 <div class="output_area">
+
+    <div class="prompt output_prompt">Out[276]:</div>
+
 
 
 <div class="output_html rendered_html output_subarea output_execute_result">
@@ -39649,7 +39856,11 @@ per Capita. However, all these Data Points will be used for Machine Learning Alg
 <div class="output_wrapper">
 <div class="output">
 
+
 <div class="output_area">
+
+    <div class="prompt output_prompt">Out[269]:</div>
+
 
 
 <div class="output_html rendered_html output_subarea output_execute_result">
@@ -39927,7 +40138,11 @@ per Capita. However, all these Data Points will be used for Machine Learning Alg
 <div class="output_wrapper">
 <div class="output">
 
+
 <div class="output_area">
+
+    <div class="prompt output_prompt">Out[270]:</div>
+
 
 
 <div class="output_html rendered_html output_subarea output_execute_result">
@@ -40061,7 +40276,11 @@ per Capita. However, all these Data Points will be used for Machine Learning Alg
 <div class="output_wrapper">
 <div class="output">
 
+
 <div class="output_area">
+
+    <div class="prompt output_prompt">Out[271]:</div>
+
 
 
 <div class="output_html rendered_html output_subarea output_execute_result">
@@ -40147,7 +40366,11 @@ per Capita. However, all these Data Points will be used for Machine Learning Alg
 <div class="output_wrapper">
 <div class="output">
 
+
 <div class="output_area">
+
+    <div class="prompt output_prompt">Out[272]:</div>
+
 
 
 <div class="output_html rendered_html output_subarea output_execute_result">
@@ -40217,6 +40440,35 @@ per Capita. However, all these Data Points will be used for Machine Learning Alg
 
 </div>
 <div class="cell border-box-sizing code_cell rendered">
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+
+
+
+ 
+ 
+<div id="0b4a56f6-e386-4854-bf51-12249fd04f98"></div>
+<div class="output_subarea output_widget_view ">
+<script type="text/javascript">
+var element = $('#0b4a56f6-e386-4854-bf51-12249fd04f98');
+</script>
+<script type="application/vnd.jupyter.widget-view+json">
+{"version_major": 2, "version_minor": 0, "model_id": "97da640cf4fd4b06b243aeb1f693039b"}
+</script>
+</div>
+
+</div>
+
+</div>
+</div>
 
 </div>
 <div class="cell border-box-sizing code_cell rendered">
