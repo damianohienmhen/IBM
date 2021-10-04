@@ -13034,6 +13034,8 @@ body {
 div#notebook {
   overflow: visible;
   border-top: none;
+}div#notebook-container{
+  padding: 6ex 12ex 8ex 12ex;
 }@media print {
   div.cell {
     display: block;
@@ -13084,11 +13086,7 @@ div#notebook {
 <div class="output_wrapper">
 <div class="output">
 
-
 <div class="output_area">
-
-    <div class="prompt output_prompt">Out[1]:</div>
-
 
 
 <div class="output_html rendered_html output_subarea output_execute_result">
@@ -13121,21 +13119,13 @@ $( document ).ready(code_toggle);
 </div>
 </div>
 
-</div>
-<div class="cell border-box-sizing code_cell rendered">
+</div># This is a cell to hide code snippets from displaying
+# This must be at first cell!
 
-<div class="output_wrapper">
-<div class="output">
+from IPython.display import HTML
 
-
-<div class="output_area">
-
-    <div class="prompt output_prompt">Out[2]:</div>
-
-
-
-<div class="output_html rendered_html output_subarea output_execute_result">
-<script>
+hide_me = ''
+HTML('''<script>
 code_show=true; 
 function code_toggle() {
   if (code_show) {
@@ -13156,25 +13146,13 @@ function code_toggle() {
 } 
 $( document ).ready(code_toggle);
 </script>
-<form action="javascript:code_toggle()"><input style="opacity:0" type="submit" value="Click here to toggle on/off the raw code."></form>
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
+<form action="javascript:code_toggle()"><input style="opacity:0" type="submit" value="Click here to toggle on/off the raw code."></form>''')
 <div class="cell border-box-sizing code_cell rendered">
 
 <div class="output_wrapper">
 <div class="output">
 
-
 <div class="output_area">
-
-    <div class="prompt"></div>
-
 
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>Collecting geojson
@@ -13356,35 +13334,13 @@ Successfully installed Jinja2-2.11.3 bqplot-0.11.0 docopt-0.6.2 nbconvert-5.6.1 
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt"></div>
-
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>The geograpical coordinate of Florida are 27.7567667, -81.4639835.
-</pre>
-</div>
-</div>
-
-</div>
-</div>
-
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 
 <div class="output_wrapper">
 <div class="output">
 
-
 <div class="output_area">
-
-    <div class="prompt"></div>
-
 
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>Requirement already satisfied: geopandas in /opt/conda/envs/Python-3.8-main/lib/python3.8/site-packages (0.9.0)
@@ -13422,11 +13378,7 @@ Requirement already satisfied: numpy&gt;=1.16.5 in /opt/conda/envs/Python-3.8-ma
 <div class="output_wrapper">
 <div class="output">
 
-
 <div class="output_area">
-
-    <div class="prompt output_prompt">Out[29]:</div>
-
 
 
 <div class="output_html rendered_html output_subarea output_execute_result">
@@ -14219,8 +14171,7 @@ Requirement already satisfied: numpy&gt;=1.16.5 in /opt/conda/envs/Python-3.8-ma
 <div class="cell border-box-sizing code_cell rendered">
 
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>Let's attempt to generate cholopleth map of Florida showing the boundaries between each of the major cities.</p>
 
@@ -14232,11 +14183,7 @@ Requirement already satisfied: numpy&gt;=1.16.5 in /opt/conda/envs/Python-3.8-ma
 <div class="output_wrapper">
 <div class="output">
 
-
 <div class="output_area">
-
-    <div class="prompt output_prompt">Out[34]:</div>
-
 
 
 <div class="output_html rendered_html output_subarea output_execute_result">
@@ -14257,11 +14204,7 @@ Requirement already satisfied: numpy&gt;=1.16.5 in /opt/conda/envs/Python-3.8-ma
 <div class="output_wrapper">
 <div class="output">
 
-
 <div class="output_area">
-
-    <div class="prompt output_prompt">Out[36]:</div>
-
 
 
 
@@ -14350,11 +14293,7 @@ Name: NAME, dtype: object</pre>
 <div class="output_wrapper">
 <div class="output">
 
-
 <div class="output_area">
-
-    <div class="prompt output_prompt">Out[38]:</div>
-
 
 
 <div class="output_html rendered_html output_subarea output_execute_result">
@@ -14863,8 +14802,7 @@ Name: NAME, dtype: object</pre>
 </div>
 
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>We will now use API calls from NSRDB (National Solar Radiation Database ) to obtain data for our Machine Learning Model <a href="https://nsrdb.nrel.gov/data-sets/api-instructions.html">https://nsrdb.nrel.gov/data-sets/api-instructions.html</a></p>
 
@@ -14888,11 +14826,7 @@ Name: NAME, dtype: object</pre>
 <div class="output_wrapper">
 <div class="output">
 
-
 <div class="output_area">
-
-    <div class="prompt output_prompt">Out[69]:</div>
-
 
 
 <div class="output_html rendered_html output_subarea output_execute_result">
@@ -19879,11 +19813,7 @@ Name: NAME, dtype: object</pre>
 <div class="output_wrapper">
 <div class="output">
 
-
 <div class="output_area">
-
-    <div class="prompt output_prompt">Out[70]:</div>
-
 
 
 <div class="output_html rendered_html output_subarea output_execute_result">
@@ -20215,11 +20145,7 @@ Name: NAME, dtype: object</pre>
 <div class="output_wrapper">
 <div class="output">
 
-
 <div class="output_area">
-
-    <div class="prompt output_prompt">Out[71]:</div>
-
 
 
 
@@ -20241,11 +20167,7 @@ Name: NAME, dtype: object</pre>
 <div class="output_wrapper">
 <div class="output">
 
-
 <div class="output_area">
-
-    <div class="prompt output_prompt">Out[73]:</div>
-
 
 
 
@@ -20281,11 +20203,7 @@ Name: Latitude, dtype: object</pre>
 <div class="output_wrapper">
 <div class="output">
 
-
 <div class="output_area">
-
-    <div class="prompt output_prompt">Out[78]:</div>
-
 
 
 <div class="output_html rendered_html output_subarea output_execute_result">
@@ -20333,11 +20251,7 @@ Name: Latitude, dtype: object</pre>
 <div class="output_wrapper">
 <div class="output">
 
-
 <div class="output_area">
-
-    <div class="prompt output_prompt">Out[79]:</div>
-
 
 
 
@@ -20371,11 +20285,7 @@ Name: Latitude, dtype: object</pre>
 <div class="output_wrapper">
 <div class="output">
 
-
 <div class="output_area">
-
-    <div class="prompt output_prompt">Out[81]:</div>
-
 
 
 <div class="output_html rendered_html output_subarea output_execute_result">
@@ -20467,11 +20377,7 @@ Name: Latitude, dtype: object</pre>
 <div class="output_wrapper">
 <div class="output">
 
-
 <div class="output_area">
-
-    <div class="prompt output_prompt">Out[82]:</div>
-
 
 
 <div class="output_html rendered_html output_subarea output_execute_result">
@@ -20563,11 +20469,7 @@ Name: Latitude, dtype: object</pre>
 <div class="output_wrapper">
 <div class="output">
 
-
 <div class="output_area">
-
-    <div class="prompt output_prompt">Out[83]:</div>
-
 
 
 <div class="output_html rendered_html output_subarea output_execute_result">
@@ -20663,16 +20565,14 @@ Name: Latitude, dtype: object</pre>
 </div>
 
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>Strong Correlation Between GHI, DHI and DNI. A degree of correlation also observed between GHI, Wind Speed and Temperature.</p>
 
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>Let's attempt to obtain data for all the major cities within the state of Florida.</p>
 
@@ -20696,11 +20596,7 @@ Name: Latitude, dtype: object</pre>
 <div class="output_wrapper">
 <div class="output">
 
-
 <div class="output_area">
-
-    <div class="prompt"></div>
-
 
 <div class="output_subarea output_stream output_stderr output_text">
 <pre>/opt/conda/envs/Python-3.8-main/lib/python3.8/site-packages/pandas/core/frame.py:4308: SettingWithCopyWarning: 
@@ -20724,11 +20620,7 @@ See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stab
 <div class="output_wrapper">
 <div class="output">
 
-
 <div class="output_area">
-
-    <div class="prompt output_prompt">Out[90]:</div>
-
 
 
 <div class="output_html rendered_html output_subarea output_execute_result">
@@ -21582,11 +21474,7 @@ See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stab
 <div class="output_wrapper">
 <div class="output">
 
-
 <div class="output_area">
-
-    <div class="prompt output_prompt">Out[91]:</div>
-
 
 
 
@@ -21605,11 +21493,7 @@ See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stab
 <div class="output_wrapper">
 <div class="output">
 
-
 <div class="output_area">
-
-    <div class="prompt"></div>
-
 
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>Requirement already satisfied: yellowbrick in /opt/conda/envs/Python-3.8-main/lib/python3.8/site-packages (1.3.post1)
@@ -21639,8 +21523,7 @@ Requirement already satisfied: joblib&gt;=0.11 in /opt/conda/envs/Python-3.8-mai
 <div class="cell border-box-sizing code_cell rendered">
 
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>Here, we determine the best K for our K means classifier using the KElbowVisualizer library.</p>
 
@@ -21652,11 +21535,7 @@ Requirement already satisfied: joblib&gt;=0.11 in /opt/conda/envs/Python-3.8-mai
 <div class="output_wrapper">
 <div class="output">
 
-
 <div class="output_area">
-
-    <div class="prompt"></div>
-
 
 <div class="output_subarea output_stream output_stderr output_text">
 <pre>findfont: Font family [&#39;sans-serif&#39;] not found. Falling back to DejaVu Sans.
@@ -21667,9 +21546,6 @@ findfont: Font family [&#39;sans-serif&#39;] not found. Falling back to DejaVu S
 </div>
 
 <div class="output_area">
-
-    <div class="prompt"></div>
-
 
 
 
@@ -21682,9 +21558,6 @@ findfont: Font family [&#39;sans-serif&#39;] not found. Falling back to DejaVu S
 </div>
 
 <div class="output_area">
-
-    <div class="prompt output_prompt">Out[95]:</div>
-
 
 
 
@@ -21703,11 +21576,7 @@ findfont: Font family [&#39;sans-serif&#39;] not found. Falling back to DejaVu S
 <div class="output_wrapper">
 <div class="output">
 
-
 <div class="output_area">
-
-    <div class="prompt output_prompt">Out[96]:</div>
-
 
 
 
@@ -21726,11 +21595,7 @@ findfont: Font family [&#39;sans-serif&#39;] not found. Falling back to DejaVu S
 <div class="output_wrapper">
 <div class="output">
 
-
 <div class="output_area">
-
-    <div class="prompt output_prompt">Out[97]:</div>
-
 
 
 
@@ -21749,11 +21614,7 @@ findfont: Font family [&#39;sans-serif&#39;] not found. Falling back to DejaVu S
 <div class="output_wrapper">
 <div class="output">
 
-
 <div class="output_area">
-
-    <div class="prompt output_prompt">Out[98]:</div>
-
 
 
 <div class="output_html rendered_html output_subarea output_execute_result">
@@ -21869,11 +21730,7 @@ findfont: Font family [&#39;sans-serif&#39;] not found. Falling back to DejaVu S
 <div class="output_wrapper">
 <div class="output">
 
-
 <div class="output_area">
-
-    <div class="prompt output_prompt">Out[99]:</div>
-
 
 
 <div class="output_html rendered_html output_subarea output_execute_result">
@@ -21891,11 +21748,7 @@ findfont: Font family [&#39;sans-serif&#39;] not found. Falling back to DejaVu S
 <div class="output_wrapper">
 <div class="output">
 
-
 <div class="output_area">
-
-    <div class="prompt output_prompt">Out[100]:</div>
-
 
 
 <div class="output_html rendered_html output_subarea output_execute_result">
@@ -22388,11 +22241,7 @@ findfont: Font family [&#39;sans-serif&#39;] not found. Falling back to DejaVu S
 <div class="output_wrapper">
 <div class="output">
 
-
 <div class="output_area">
-
-    <div class="prompt output_prompt">Out[101]:</div>
-
 
 
 <div class="output_html rendered_html output_subarea output_execute_result">
@@ -22664,11 +22513,7 @@ findfont: Font family [&#39;sans-serif&#39;] not found. Falling back to DejaVu S
 <div class="output_wrapper">
 <div class="output">
 
-
 <div class="output_area">
-
-    <div class="prompt output_prompt">Out[102]:</div>
-
 
 
 <div class="output_html rendered_html output_subarea output_execute_result">
@@ -22922,16 +22767,14 @@ findfont: Font family [&#39;sans-serif&#39;] not found. Falling back to DejaVu S
 </div>
 
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>Next, we obtain data to address the question of optimizing energy production and reduce areas of inefficient Energy Usage</p>
 
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>Data downloaded from the Florida Municipal Electric Association's website <a href="https://assets.noviams.com/novi-file-uploads/fmea/Stats/2019_florida_publicpower_utility_statistical_information.xls">https://assets.noviams.com/novi-file-uploads/fmea/Stats/2019_florida_publicpower_utility_statistical_information.xls</a></p>
 
@@ -22943,11 +22786,7 @@ findfont: Font family [&#39;sans-serif&#39;] not found. Falling back to DejaVu S
 <div class="output_wrapper">
 <div class="output">
 
-
 <div class="output_area">
-
-    <div class="prompt output_prompt">Out[103]:</div>
-
 
 
 <div class="output_html rendered_html output_subarea output_execute_result">
@@ -23102,11 +22941,7 @@ findfont: Font family [&#39;sans-serif&#39;] not found. Falling back to DejaVu S
 <div class="output_wrapper">
 <div class="output">
 
-
 <div class="output_area">
-
-    <div class="prompt output_prompt">Out[89]:</div>
-
 
 
 
@@ -23136,11 +22971,7 @@ findfont: Font family [&#39;sans-serif&#39;] not found. Falling back to DejaVu S
 <div class="output_wrapper">
 <div class="output">
 
-
 <div class="output_area">
-
-    <div class="prompt output_prompt">Out[197]:</div>
-
 
 
 <div class="output_html rendered_html output_subarea output_execute_result">
@@ -36829,11 +36660,7 @@ findfont: Font family [&#39;sans-serif&#39;] not found. Falling back to DejaVu S
 <div class="output_wrapper">
 <div class="output">
 
-
 <div class="output_area">
-
-    <div class="prompt output_prompt">Out[198]:</div>
-
 
 
 <div class="output_html rendered_html output_subarea output_execute_result">
@@ -36946,8 +36773,7 @@ findfont: Font family [&#39;sans-serif&#39;] not found. Falling back to DejaVu S
 </div>
 
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>Positive Correlation Exists Between Total kWh Sales, Peak Power Generation and Municipal Population. Weak correlation between kWh Sales and Energy
 per Capita. However, all these Data Points will be used for Machine Learning Algorithm.</p>
@@ -36966,11 +36792,7 @@ per Capita. However, all these Data Points will be used for Machine Learning Alg
 <div class="output_wrapper">
 <div class="output">
 
-
 <div class="output_area">
-
-    <div class="prompt output_prompt">Out[229]:</div>
-
 
 
 <div class="output_html rendered_html output_subarea output_execute_result">
@@ -37230,8 +37052,7 @@ per Capita. However, all these Data Points will be used for Machine Learning Alg
 <div class="cell border-box-sizing code_cell rendered">
 
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>Lets try to use the K-Means algorithm to obtain insight into the data set</p>
 
@@ -37243,11 +37064,7 @@ per Capita. However, all these Data Points will be used for Machine Learning Alg
 <div class="output_wrapper">
 <div class="output">
 
-
 <div class="output_area">
-
-    <div class="prompt"></div>
-
 
 
 
@@ -37260,9 +37077,6 @@ per Capita. However, all these Data Points will be used for Machine Learning Alg
 </div>
 
 <div class="output_area">
-
-    <div class="prompt output_prompt">Out[231]:</div>
-
 
 
 
@@ -37281,11 +37095,7 @@ per Capita. However, all these Data Points will be used for Machine Learning Alg
 <div class="output_wrapper">
 <div class="output">
 
-
 <div class="output_area">
-
-    <div class="prompt output_prompt">Out[232]:</div>
-
 
 
 
@@ -37304,11 +37114,7 @@ per Capita. However, all these Data Points will be used for Machine Learning Alg
 <div class="output_wrapper">
 <div class="output">
 
-
 <div class="output_area">
-
-    <div class="prompt output_prompt">Out[233]:</div>
-
 
 
 <div class="output_html rendered_html output_subarea output_execute_result">
@@ -37418,11 +37224,7 @@ per Capita. However, all these Data Points will be used for Machine Learning Alg
 <div class="output_wrapper">
 <div class="output">
 
-
 <div class="output_area">
-
-    <div class="prompt output_prompt">Out[234]:</div>
-
 
 
 <div class="output_html rendered_html output_subarea output_execute_result">
@@ -37844,11 +37646,7 @@ per Capita. However, all these Data Points will be used for Machine Learning Alg
 <div class="output_wrapper">
 <div class="output">
 
-
 <div class="output_area">
-
-    <div class="prompt output_prompt">Out[235]:</div>
-
 
 
 <div class="output_html rendered_html output_subarea output_execute_result">
@@ -37866,11 +37664,7 @@ per Capita. However, all these Data Points will be used for Machine Learning Alg
 <div class="output_wrapper">
 <div class="output">
 
-
 <div class="output_area">
-
-    <div class="prompt output_prompt">Out[236]:</div>
-
 
 
 <div class="output_html rendered_html output_subarea output_execute_result">
@@ -38268,11 +38062,7 @@ per Capita. However, all these Data Points will be used for Machine Learning Alg
 <div class="output_wrapper">
 <div class="output">
 
-
 <div class="output_area">
-
-    <div class="prompt output_prompt">Out[237]:</div>
-
 
 
 <div class="output_html rendered_html output_subarea output_execute_result">
@@ -38341,16 +38131,14 @@ per Capita. However, all these Data Points will be used for Machine Learning Alg
 </div>
 
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>From the data clusters generated, the K-Means algorithm did not provide reasonable insight into the data</p>
 
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>Next, we will use the K-Means algorithm to target areas of in-efficient energy production</p>
 
@@ -38368,11 +38156,7 @@ per Capita. However, all these Data Points will be used for Machine Learning Alg
 <div class="output_wrapper">
 <div class="output">
 
-
 <div class="output_area">
-
-    <div class="prompt output_prompt">Out[240]:</div>
-
 
 
 <div class="output_html rendered_html output_subarea output_execute_result">
@@ -38570,11 +38354,7 @@ per Capita. However, all these Data Points will be used for Machine Learning Alg
 <div class="output_wrapper">
 <div class="output">
 
-
 <div class="output_area">
-
-    <div class="prompt output_prompt">Out[241]:</div>
-
 
 
 <div class="output_html rendered_html output_subarea output_execute_result">
@@ -38627,11 +38407,7 @@ per Capita. However, all these Data Points will be used for Machine Learning Alg
 <div class="output_wrapper">
 <div class="output">
 
-
 <div class="output_area">
-
-    <div class="prompt"></div>
-
 
 
 
@@ -38644,9 +38420,6 @@ per Capita. However, all these Data Points will be used for Machine Learning Alg
 </div>
 
 <div class="output_area">
-
-    <div class="prompt output_prompt">Out[242]:</div>
-
 
 
 
@@ -38665,11 +38438,7 @@ per Capita. However, all these Data Points will be used for Machine Learning Alg
 <div class="output_wrapper">
 <div class="output">
 
-
 <div class="output_area">
-
-    <div class="prompt output_prompt">Out[243]:</div>
-
 
 
 
@@ -38688,11 +38457,7 @@ per Capita. However, all these Data Points will be used for Machine Learning Alg
 <div class="output_wrapper">
 <div class="output">
 
-
 <div class="output_area">
-
-    <div class="prompt output_prompt">Out[244]:</div>
-
 
 
 <div class="output_html rendered_html output_subarea output_execute_result">
@@ -38802,11 +38567,7 @@ per Capita. However, all these Data Points will be used for Machine Learning Alg
 <div class="output_wrapper">
 <div class="output">
 
-
 <div class="output_area">
-
-    <div class="prompt output_prompt">Out[275]:</div>
-
 
 
 <div class="output_html rendered_html output_subarea output_execute_result">
@@ -38824,11 +38585,7 @@ per Capita. However, all these Data Points will be used for Machine Learning Alg
 <div class="output_wrapper">
 <div class="output">
 
-
 <div class="output_area">
-
-    <div class="prompt output_prompt">Out[246]:</div>
-
 
 
 <div class="output_html rendered_html output_subarea output_execute_result">
@@ -39238,11 +38995,7 @@ per Capita. However, all these Data Points will be used for Machine Learning Alg
 <div class="output_wrapper">
 <div class="output">
 
-
 <div class="output_area">
-
-    <div class="prompt output_prompt">Out[247]:</div>
-
 
 
 <div class="output_html rendered_html output_subarea output_execute_result">
@@ -39299,16 +39052,14 @@ per Capita. However, all these Data Points will be used for Machine Learning Alg
 </div>
 
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>No real insight gleaned from K-means algorithm on Energy per Capita data</p>
 
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>Let us run a DBSCAN Machine learning algorithm to see if any real cluster information is generated between the data points</p>
 
@@ -39326,11 +39077,7 @@ per Capita. However, all these Data Points will be used for Machine Learning Alg
 <div class="output_wrapper">
 <div class="output">
 
-
 <div class="output_area">
-
-    <div class="prompt output_prompt">Out[254]:</div>
-
 
 
 <div class="output_html rendered_html output_subarea output_execute_result">
@@ -39416,11 +39163,7 @@ per Capita. However, all these Data Points will be used for Machine Learning Alg
 <div class="output_wrapper">
 <div class="output">
 
-
 <div class="output_area">
-
-    <div class="prompt output_prompt">Out[257]:</div>
-
 
 
 
@@ -39440,11 +39183,7 @@ per Capita. However, all these Data Points will be used for Machine Learning Alg
 <div class="output_wrapper">
 <div class="output">
 
-
 <div class="output_area">
-
-    <div class="prompt output_prompt">Out[258]:</div>
-
 
 
 
@@ -39470,11 +39209,7 @@ per Capita. However, all these Data Points will be used for Machine Learning Alg
 <div class="output_wrapper">
 <div class="output">
 
-
 <div class="output_area">
-
-    <div class="prompt output_prompt">Out[264]:</div>
-
 
 
 <div class="output_html rendered_html output_subarea output_execute_result">
@@ -39896,11 +39631,7 @@ per Capita. However, all these Data Points will be used for Machine Learning Alg
 <div class="output_wrapper">
 <div class="output">
 
-
 <div class="output_area">
-
-    <div class="prompt output_prompt">Out[276]:</div>
-
 
 
 <div class="output_html rendered_html output_subarea output_execute_result">
@@ -39918,11 +39649,7 @@ per Capita. However, all these Data Points will be used for Machine Learning Alg
 <div class="output_wrapper">
 <div class="output">
 
-
 <div class="output_area">
-
-    <div class="prompt output_prompt">Out[269]:</div>
-
 
 
 <div class="output_html rendered_html output_subarea output_execute_result">
@@ -40200,11 +39927,7 @@ per Capita. However, all these Data Points will be used for Machine Learning Alg
 <div class="output_wrapper">
 <div class="output">
 
-
 <div class="output_area">
-
-    <div class="prompt output_prompt">Out[270]:</div>
-
 
 
 <div class="output_html rendered_html output_subarea output_execute_result">
@@ -40338,11 +40061,7 @@ per Capita. However, all these Data Points will be used for Machine Learning Alg
 <div class="output_wrapper">
 <div class="output">
 
-
 <div class="output_area">
-
-    <div class="prompt output_prompt">Out[271]:</div>
-
 
 
 <div class="output_html rendered_html output_subarea output_execute_result">
@@ -40428,11 +40147,7 @@ per Capita. However, all these Data Points will be used for Machine Learning Alg
 <div class="output_wrapper">
 <div class="output">
 
-
 <div class="output_area">
-
-    <div class="prompt output_prompt">Out[272]:</div>
-
 
 
 <div class="output_html rendered_html output_subarea output_execute_result">
