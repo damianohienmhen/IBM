@@ -1,5 +1,5 @@
-## <img src="./IBMGraphic.png" width = "200" height = "200" class="img-responsive" float = "left" alt="Florida"> <img> 
 ## Florida Hacks with IBM Competition
+## <img src="./IBMGraphic.png" width = "200" height = "200" class="img-responsive" float = "left" alt="Florida"> <img> 
 ### By Damian Ohienmhen
 
 <img src="./IBMNature.png" class="img-responsive" alt="Florida"> <img>
