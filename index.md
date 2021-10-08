@@ -1,7 +1,5 @@
 ## Florida Hacks with IBM Competition
 ### By Damian Ohienmhen
-## [Florida Hacks Image](https://github.com/damianohienmhen/IBM/edit/gh-pages/IBMHacks.png)
-
 
 <img src="./IBMHacks.png" class="img-responsive" height= "500" width = "1000" alt="Florida"> <img>
 
