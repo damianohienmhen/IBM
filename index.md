@@ -1,5 +1,5 @@
 ## Welcome to GitHub Pages
-[Florida Hacks Image](https://github.com/damianohienmhen/IBM/IBMHacks.png)
+[Florida Hacks Image](https://github.com/damianohienmhen/IBM/IBMHacks)
 
 You can use the [editor on GitHub](https://github.com/damianohienmhen/IBM/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
 
