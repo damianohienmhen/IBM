@@ -1,4 +1,5 @@
 ## Florida Hacks with IBM Competition
+### <img src="./IBMGraphic.png" class="img-responsive" float = "right" alt="Florida"> <img>
 ### By Damian Ohienmhen
 
 <img src="./IBMNature.png" class="img-responsive" alt="Florida"> <img>
