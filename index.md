@@ -3,7 +3,7 @@
 ## [Florida Hacks Image](https://github.com/damianohienmhen/IBM/edit/gh-pages/IBMHacks.png)
 
 
-<img src="https://github.com/damianohienmhen/IBM/edit/gh-pages/IBMHacks.png" class="img-responsive" alt="Florida"> <img>
+<img src="/IBM/edit/gh-pages/IBMHacks.png" class="img-responsive" alt="Florida"> <img>
 
 You can use the [editor on GitHub](https://github.com/damianohienmhen/IBM/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
 
