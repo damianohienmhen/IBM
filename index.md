@@ -1,4 +1,5 @@
-## Welcome to GitHub Pages
+## Florida Hacks with IBM Competition
+### By Damian Ohienmhen
 ## [Florida Hacks Image](https://github.com/damianohienmhen/IBM/edit/gh-pages/IBMHacks.png)
 
 
