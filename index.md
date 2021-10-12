@@ -1,20 +1,6 @@
 ## Florida Hacks with IBM Competition 
+### Submission by Damian Ohienmhen
 ## <img src="./IBMGraphic.png" width = "200" height = "200" class="img-responsive" align = "left" alt="Florida"> <img> 
-### By Damian Ohienmhen
-
-
-<!DOCTYPE html>
-<html lang="en">
-    <head>
-        <title>{% block title %}Auctions{% endblock %}</title>
-   </head>
-    <body>
-        <h1>Auctions</h1>
-   
-        {% block body %}
-        {% endblock %}
-    </body>
-</html>
 
 <img src="./IBMNature.png" class="img-responsive" alt="Florida"> <img>
 
