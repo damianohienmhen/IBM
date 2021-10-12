@@ -2,9 +2,9 @@
 ### Submission by Damian Ohienmhen
 ## <img src="./IBMGraphic.png" width = "200" height = "200" class="img-responsive" align = "left" alt="Florida"> <img> 
 
-You can use the [editor on GitHub](https://github.com/damianohienmhen/IBM/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
+## Hackathon Overview
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+This challenge provided an oppourtunity to use the weatlh of data available in the public domain to address the effects of climate change. As sea water levels rise and global temperatures increase, it is important that we use all the available tools at our disposal to mitigate the worst effects of a changing climate. This challenge invites participants to use IBM Machine Learning/Artificial Intelligence tools to build solutions which address these problems.
 
 ### Challenge Statement #4 - Power Consumption
 
