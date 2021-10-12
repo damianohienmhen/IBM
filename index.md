@@ -17,6 +17,13 @@ How can we:
 2. Optimize power generation to reduce overproduction.
 3. Target and reduce areas of inefficient energy usage.
 
+
+
+### Strategy and Implementation
+
+Using the IBM Cloud Pak Data Solution and libraries available on the Notebook Platform, a detailed analysis of Florida's power consumption and renewable energy potential was carried out. Data sources such as consumable API from the National Solar Radiation Database (NSRDB) and Florida's Munical Electric Association were used in the analysis. 
+
+
 <a href = "IBMHackathon.html">Hackathon</a>
 For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
 
