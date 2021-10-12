@@ -2,6 +2,21 @@
 ## <img src="./IBMGraphic.png" width = "200" height = "200" class="img-responsive" align = "left" alt="Florida"> <img> 
 ### By Damian Ohienmhen
 
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>{% block title %}Auctions{% endblock %}</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+   </head>
+    <body>
+        <h1>Auctions</h1>
+   
+        {% block body %}
+        {% endblock %}
+    </body>
+</html>
+
 <img src="./IBMNature.png" class="img-responsive" alt="Florida"> <img>
 
 You can use the [editor on GitHub](https://github.com/damianohienmhen/IBM/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
