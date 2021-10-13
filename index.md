@@ -48,5 +48,5 @@ The colored points represent the five major classification points which the mode
 A full description of the analysis as well as dashboard of the results are available by following this link to the worksheet <a href = "IBMHackathon.html">Hackathon</a>
 
 Links to datasets used for study.
-1. API link provided by the National Solar Radiation Database (NSRDB) https://nsrdb.nrel.gov/data-sets/api-instructions.html
+1. API link provided by the National Solar Radiation Database (NSRDB) <a href = "https://nsrdb.nrel.gov/data-sets/api-instructions.html">Hackathon</a>https://nsrdb.nrel.gov/data-sets/api-instructions.html
 2. Link to dataset provided by the Florida Municipal Electric Association Website https://assets.noviams.com/novi-file-uploads/fmea/Stats/2019_florida_publicpower_utility_statistical_information.xls
