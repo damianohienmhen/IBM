@@ -25,7 +25,7 @@ Using the IBM Cloud Pak Data Solution and libraries available on the Notebook Pl
 
 API Data was cleansed and re-formatted appropriately for the task. Major variables like Mean Direct Horizontal Irradiation (DHI), Mean Global Horizontal Irradiation (GHI) and Mean Direct Normal Irradiation were computed and used for our Machine Learning (ML) model. The K-Means Unsupervised Machine Learning Model was used to cluster the various variable points. The graphic of the resulting solution is shown below.
 
-## <img src="./kmeans.png" width = "230" height = "220" class="img-responsive" align = "left" alt="Florida"> <img> 
+## <img src="./kmeans.png" width = "230" height = "220" class="img-responsive" align = "center" alt="Florida"> <img> 
 
 The colored points represent the various major cities in Florida. Each of the 65 cities have now been classified across 3 different categories. They are described as follows:
 
@@ -33,16 +33,20 @@ The colored points represent the various major cities in Florida. Each of the 65
 2. Clusters in Light Green - These points show high means across each of the variables described in the analysis. They have been identified to have the 2nd best alternative for renewable energy assets.
 3. Clusters in Red - These points show the least averages across each of the major data points under consideration. As a result, these areas have the least potential for renewable energy generation when compared to the other clusters.
 
-Next, the question of overproduction of energy and inefficient energy usage was addressed. To compare energy usage, a variable known as Energy per Capita was computed which is the division of the Total Annual Power Sales (in kWh) by the Municipal Population. Power generation was compared across different regions using the reported energy generation capacity in each region. A DBScan Machine Learning Algorithm 
+Next, the question of overproduction of energy and inefficient energy usage was addressed. To compare energy usage, a variable known as Energy per Capita was computed which is the division of the Total Annual Power Sales (in kWh) by the Municipal Population. Power generation was compared across different regions using the reported energy generation capacity in each region. A DBScan Machine Learning Algorithm was used to classify the points. The resulting graphic below shows the main result.
 
 
-<a href = "IBMHackathon.html">Hackathon</a>
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
+## <img src="./dbscan.png" width = "230" height = "220" class="img-responsive" align = "center" alt="Florida"> <img> 
 
-### Jekyll Themes
+The colored points represent the five major classification points which the model returned. They are described as follows:
 
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/damianohienmhen/IBM/settings/pages). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
+1. Clusters in Orange - These have the highest Energy per Capita when compared to the other points of study. They also have the largest municipal populations than the other major groupings. This would indicate an efficient use of energy from these areas.
+2. Clusters in Red - These clusters have higher than normal Energy per Capita when compared to their counterparts. This could indicate inefficient energy usage in these areas.
+3. Clusters in Purple - These regions show the highest than normal Energy sales when compared to their counterparts. This could indicate an overproduction of energy and a need to optimize its power production.
+4. Clusters in Blue - These regions have lower than average Energy per Capita and moderate population sizes. No determination was made to the relevance of this cluser.   
 
-### Support or Contact
+A full description of the analysis as well as dashboard of the results are available by following this link to the worksheet <a href = "IBMHackathon.html">Hackathon</a>
 
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
+Links to datasets used for study.
+1. API link provided by the National Solar Radiation Database (NSRDB) https://nsrdb.nrel.gov/data-sets/api-instructions.html
+2. Link to dataset provided by the Florida Municipal Electric Association Website https://assets.noviams.com/novi-file-uploads/fmea/Stats/2019_florida_publicpower_utility_statistical_information.xls
