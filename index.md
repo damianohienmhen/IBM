@@ -25,7 +25,15 @@ Using the IBM Cloud Pak Data Solution and libraries available on the Notebook Pl
 
 API Data was cleansed and re-formatted appropriately for the task. Major variables like Mean Direct Horizontal Irradiation (DHI), Mean Global Horizontal Irradiation (GHI) and Mean Direct Normal Irradiation were computed and used for our Machine Learning (ML) model. The K-Means Unsupervised Machine Learning Model was used to cluster the various variable points. The graphic of the resulting solution is shown below.
 
-## <img src="./IBMGraphic.png" width = "230" height = "220" class="img-responsive" align = "left" alt="Florida"> <img> 
+## <img src="./kmeans.png" width = "230" height = "220" class="img-responsive" align = "left" alt="Florida"> <img> 
+
+The colored points represent the various major cities in Florida. Each of the 65 cities have now been classified across 3 different categories. They are described as follows:
+
+1. Clusters in Purple - These points have the highest averages across each of the the variables under study. These points are recognized to have the greatest potential for both solar and wind generating assets.
+2. Clusters in Light Green - These points show high means across each of the variables described in the analysis. They have been identified to have the 2nd best alternative for renewable energy assets.
+3. Clusters in Red - These points show the least averages across each of the major data points under consideration. As a result, these areas have the least potential for renewable energy generation when compared to the other clusters.
+
+Next, the question of overproduction of energy and inefficient energy usage was addressed. To compare energy usage, a variable known as Energy per Capita was computed which is the division of the Total Annual Power Sales (in kWh) by the Municipal Population. Power generation was compared across different regions using the reported energy generation capacity in each region. A DBScan Machine Learning Algorithm 
 
 
 <a href = "IBMHackathon.html">Hackathon</a>
