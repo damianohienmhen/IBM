@@ -36,7 +36,7 @@ The colored points represent the various major cities in Florida. Each of the 65
 Next, the question of overproduction of energy and inefficient energy usage was addressed. To compare energy usage, a variable known as Energy per Capita was computed which is the division of the Total Annual Power Sales (in kWh) by the Municipal Population. Power generation was compared across different regions using the reported energy generation capacity in each region. A DBScan Machine Learning Algorithm was used to classify the points. The resulting graphic below shows the main result.
 
 
-## <img src="./dbscan.png" width = "230" height = "220" class="img-responsive" align = "center" alt="Florida"> <img> 
+## <img src="./dbscan.png" class="img-responsive" align = "center" alt="Florida"> <img> 
 
 The colored points represent the five major classification points which the model returned. They are described as follows:
 
