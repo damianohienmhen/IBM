@@ -25,7 +25,7 @@ Using the IBM Cloud Pak Data Solution and libraries available on the Notebook Pl
 
 API Data was cleansed and re-formatted appropriately for the task. Major variables like Mean Direct Horizontal Irradiation (DHI), Mean Global Horizontal Irradiation (GHI) and Mean Direct Normal Irradiation were computed and used for our Machine Learning (ML) model. The K-Means Unsupervised Machine Learning Model was used to cluster the various variable points. The graphic of the resulting solution is shown below.
 
-## <img src="./kmeans.png" width = "230" height = "220" class="img-responsive" align = "center" alt="Florida"> <img> 
+## <img src="./kmeans.png" class="img-responsive" align = "center" alt="Florida"> <img> 
 
 The colored points represent the various major cities in Florida. Each of the 65 cities have now been classified across 3 different categories. They are described as follows:
 
