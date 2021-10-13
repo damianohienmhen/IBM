@@ -21,7 +21,11 @@ How can we:
 
 ### Strategy and Implementation
 
-Using the IBM Cloud Pak Data Solution and libraries available on the Notebook Platform, a detailed analysis of Florida's power consumption and renewable energy potential was carried out. Data sources such as consumable API from the National Solar Radiation Database (NSRDB) and Florida's Munical Electric Association were used in the analysis. 
+Using the IBM Cloud Pak Data Solution and libraries available on the Notebook Platform, a detailed analysis of Florida's power consumption and renewable energy potential was carried out. Data sources such as consumable API from the National Solar Radiation Database (NSRDB) and Florida's Municipal Electric Association were used in the analysis. 
+
+API Data was cleansed and re-formatted appropriately for the task. Major variables like Mean Direct Horizontal Irradiation (DHI), Mean Global Horizontal Irradiation (GHI) and Mean Direct Normal Irradiation were computed and used for our Machine Learning (ML) model. The K-Means Unsupervised Machine Learning Model was used to cluster the various variable points. The graphic of the resulting solution is shown below.
+
+## <img src="./IBMGraphic.png" width = "230" height = "220" class="img-responsive" align = "left" alt="Florida"> <img> 
 
 
 <a href = "IBMHackathon.html">Hackathon</a>
