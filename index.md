@@ -1,6 +1,6 @@
 ## Florida Hacks with IBM Competition 
 ### Submission by Damian Ohienmhen
-## <img src="./IBMGraphic.png" width = "230" height = "220" class="img-responsive" align = "left" alt="Florida"> <img> 
+## <img src="./IBMGraphic.png" width = "230" height = "240" class="img-responsive" align = "left" alt="Florida"> <img> 
 
 ## Hackathon Overview
 
