@@ -1,4 +1,5 @@
-## Florida Hacks with IBM Competition - Creating Solutions to Combat Climate Change 
+## Florida Hacks with IBM Competition 
+## Creating Solutions to Combat Climate Change 
 ### Submission by Damian Ohienmhen
 ## <img src="./IBMGraphic.png" width = "230" height = "240" class="img-responsive" align = "left" alt="Florida"> <img> 
 
