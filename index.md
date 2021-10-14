@@ -42,7 +42,7 @@ Data from 2019 was used in the analysis as it was the most recent dataset from t
 
 1. Clusters in Orange - These have the highest Energy per Capita when compared to the other points of study. They also have the largest municipal populations than the other major groupings. This would indicate an efficient use of energy from these areas.
 2. Clusters in Red - These clusters have higher than normal Energy per Capita when compared to their counterparts. This could indicate inefficient energy usage in these areas.
-3. Clusters in Purple - These regions show the highest than normal Energy sales when compared to their counterparts. This could indicate an overproduction of energy and a need to optimize its power production.
+3. Clusters in Purple - These regions show higher than normal Energy sales when compared to their counterparts. This could indicate an overproduction of energy and a need to optimize its power production.
 4. Clusters in Blue - These regions have lower than average Energy per Capita and moderate population sizes. No determination was made to the relevance of this cluser.   
 
 A full description of the analysis as well as dashboard of the results are available by following this link to the worksheet <a href = "IBMHackathon.html">Hackathon</a>
