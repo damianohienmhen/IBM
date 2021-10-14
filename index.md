@@ -52,6 +52,6 @@ A full description of the analysis as well as dashboard of the results are avail
 
 By leveraging IBM Cloud technologies including its Notebook software tool, a Machine Learning Algorithm was developed to determine areas with potention renewable enerygy generation. The Machine Learning algorithm also identified areas with an overproduction of energy and inefficient energy usage. This shows the huge potential that these technologies have to address lingering concerns around Climate Change by leveraging data to facilitate mititation and adaptation strategies. 
 
-Links to datasets used for study.
+## Links to datasets used for study.
 1. API link provided by the National Solar Radiation Database (NSRDB) <a href = "https://nsrdb.nrel.gov/data-sets/api-instructions.html">NSRDB API</a>
 2. Link to dataset provided by the Florida Municipal Electric Association (FMEA) Website <a href = "https://assets.noviams.com/novi-file-uploads/fmea/Stats/2019_florida_publicpower_utility_statistical_information.xls">FMEA Dataset</a>
