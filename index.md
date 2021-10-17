@@ -21,11 +21,13 @@ How can we:
 
 ### Strategy and Implementation
 
-Using the IBM Cloud Pak Data Solution and libraries available on the Notebook Platform, a detailed analysis of Florida's power consumption and renewable energy potential was carried out. Data sources such as consumable API from the National Solar Radiation Database (NSRDB) and Florida's Municipal Electric Association were used in the analysis. 
+Using the IBM Cloud Pak Data Solution and libraries available on the Notebook Platform, a detailed analysis of Florida's power consumption and renewable energy potential was carried out. Data sources such as consumable API from the National Solar Radiation Database (NSRDB) and Florida's Municipal Electric Association were used in the analysis.  
 
 API Data was cleansed and re-formatted appropriately for the task. Major variables like Mean Direct Horizontal Irradiation (DHI), Mean Global Horizontal Irradiation (GHI) and Mean Direct Normal Irradiation were computed and used for our Machine Learning (ML) model. The K-Means Unsupervised Machine Learning Model was used to cluster the various variable points. The graphic of the resulting solution is shown below.
 
 ## <img src="./kmeans.png" class="img-responsive" align = "center" alt="Florida"> <img> 
+
+The resulting visual dashboard allows for users to identify specific areas and regions within the Florida state which have the potential for solar and wind power generation facilities or have overproduction/inefficiency concerns. This easy to use dashboard linked directly to the original worksheet can be used quickly to answer pertinent questions.
 
 Data from 2020 was used in the analysis as it provided the most complete dataset the API provided. The colored points represent the various major cities in Florida. Each of the 65 cities have now been classified across 3 different categories. They are described as follows:
 
