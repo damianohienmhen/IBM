@@ -27,8 +27,6 @@ API Data was cleansed and re-formatted appropriately for the task. Major variabl
 
 ## <img src="./kmeans.png" class="img-responsive" align = "center" alt="Florida"> <img> 
 
-The resulting visual dashboard allows for users to identify specific areas and regions within the Florida state which have the potential for solar and wind power generation facilities or have overproduction/inefficiency concerns. This easy to use dashboard linked directly to the original worksheet can be used quickly to answer pertinent questions.
-
 Data from 2020 was used in the analysis as it provided the most complete dataset the API provided. The colored points represent the various major cities in Florida. Each of the 65 cities have now been classified across 3 different categories. They are described as follows:
 
 1. Clusters in Purple - These points have the highest averages across each of the the variables under study. These points are recognized to have the greatest potential for both solar and wind generating assets.
@@ -51,6 +49,9 @@ A full description of the analysis as well as dashboard of the results are avail
 
 
 ### Conclusion
+
+
+The resulting visual dashboard allows for users to identify specific areas and regions within the Florida state which have the potential for solar and wind power generation facilities or have overproduction/inefficiency concerns. This easy to use dashboard linked directly to the original worksheet can be used quickly to answer pertinent questions.
 
 By leveraging IBM Cloud technologies including its Notebook software tool, a Machine Learning Algorithm was developed to determine areas with potention renewable enerygy generation. The Machine Learning algorithm also identified areas with an overproduction of energy and inefficient energy usage. This shows the huge potential that these technologies have to address lingering concerns around Climate Change by leveraging data to facilitate mititation and adaptation strategies. 
 
