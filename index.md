@@ -27,7 +27,7 @@ API Data was cleansed and re-formatted appropriately for the task. Major variabl
 
 ## <img src="./kmeans.png" class="img-responsive" align = "center" alt="Florida"> <img> 
 
-Data from 2020 was used in the analysis as it provided the most complete dataset the API provided. The colored points represent the various major cities in Florida. Each of the 65 cities have now been classified across 3 different categories. They are described as follows:
+Data from 2020 was used in the analysis as it provided the most complete dataset the API provided. The K-Means Machine Learning Algorithm was used to cluster the data points. The colored points represent the various major cities in Florida. Each of the 65 cities have now been classified across 3 different categories. They are described as follows:
 
 1. Clusters in Purple - These points have the highest averages across each of the the variables under study. These points are recognized to have the greatest potential for both solar and wind generating assets.
 2. Clusters in Light Green - These points show high means across each of the variables described in the analysis. They have been identified to have the 2nd best alternative for renewable energy assets.
@@ -38,7 +38,7 @@ Next, the question of overproduction of energy and inefficient energy usage was 
 
 ## <img src="./dbscan.png" class="img-responsive" align = "center" alt="Florida"> <img> 
 
-Data from 2019 was used in the analysis as it was the most recent dataset from the website. The colored points represent the five major classification points which the model returned. They are described as follows:
+Data from 2019 was used in the analysis as it was the most recent dataset from the website. The DBScan Machine Learning Algorithm was used to cluster the data points.The colored points represent the five major classification points which the model returned. They are described as follows:
 
 1. Clusters in Orange - These have the highest Energy per Capita when compared to the other points of study. They also have the largest municipal populations than the other major groupings. This would indicate an efficient use of energy from these areas.
 2. Clusters in Red - These clusters have higher than normal Energy per Capita when compared to their counterparts. This could indicate inefficient energy usage in these areas.
