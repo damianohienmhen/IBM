@@ -49,7 +49,7 @@ Data from 2019 was used in the analysis as it was the most recent dataset from t
 4. Clusters in Blue - These regions have lower than average Energy per Capita and moderate population sizes. No determination was made to the relevance of this cluser.   
 
 A full description of the analysis as well as dashboard of the results are available by following this link to the worksheet 
-<button style="background-color:white; border-color: white"><a href = "IBMHackathon.html">Full IBM Hackathon Dashboard</a></button>
+<button style="background-color:white; border-color: grey"><a href = "IBMHackathon.html">Full IBM Hackathon Dashboard</a></button>
 
 
 ### Conclusion
